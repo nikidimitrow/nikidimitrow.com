@@ -7,8 +7,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nikidimitrow.com" # the base hostname & protocol for your site
 
 # Theme Settings
-remote_theme: "pages-themes/minimal@v0.2.0"
-minimal_mistakes_skin: "air" # Choose from: air, aqua, contrast, dark, dirt, neon, sunrise
+remote_theme: "BDHU/minimalist"
+color-scheme: dark # This natively activates the dark mode!
 
 # Sidebar Settings (This creates the links on the left)
 google_scholar: https://scholar.google.com
