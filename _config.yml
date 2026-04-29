@@ -7,11 +7,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nikidimitrow.com" # the base hostname & protocol for your site
 
 # Theme Settings
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "air" # Choose from: air, aqua, contrast, dark, dirt, neon, sunrise
 
 # Plugins
 plugins:
   - jekyll-remote-theme
+  - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
