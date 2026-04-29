@@ -1,0 +1,17 @@
+# Site Settings
+title: Nikolay Dimitrow
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Personal website of Nikolay Dimitrow. Portfolio and Blog.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://nikidimitrow.com" # the base hostname & protocol for your site
+
+# Theme Settings
+remote_theme: pages-themes/minimal@v0.2.0
+minimal_mistakes_skin: "air" # Choose from: air, aqua, contrast, dark, dirt, neon, sunrise
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
