@@ -7,8 +7,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nikidimitrow.com" # the base hostname & protocol for your site
 
 # Theme Settings
-remote_theme: "mmistakes/minimal-mistakes"
+remote_theme: "pages-themes/minimal@v0.2.0"
 minimal_mistakes_skin: "air" # Choose from: air, aqua, contrast, dark, dirt, neon, sunrise
+
+# Sidebar Settings (This creates the links on the left)
+google_scholar: https://scholar.google.com
+github_username: nikidimitrow
+twitter_username: nikidimitrow
 
 # Plugins
 plugins:
