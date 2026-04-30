@@ -9,7 +9,7 @@ url: "https://nikidimitrow.com" # the base hostname & protocol for your site
 # Theme Settings
 remote_theme: "BDHU/minimalist"
 color-scheme: dark 
-logo: "/assets/images/logo_nikidimitrow.png" 
+logo: "/assets/images/logo.png" 
 
 # Sidebar Settings (This creates the links on the left)
 github_username: nikidimitrow
