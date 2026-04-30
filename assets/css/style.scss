@@ -1,9 +1,18 @@
+---
+---
 @import "{{ site.theme }}";
 
 body {
   background-color: #121212;
   color: #e0e0e0;
 }
-header {
-  color: #33a6ff; /* That blue color for the title */
+
+/* This changes your Name/Title to neon green */
+header, header h1, header h1 a {
+  color: #00ff00 !important; 
+}
+
+/* This changes all your sidebar links and other links to neon green */
+a, a:hover {
+  color: #00ff00 !important; 
 }
