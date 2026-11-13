@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проекти — Николай Димитров</title>
+  <meta name="description" content="Казуси в Edge AI: VisDrone INT8 на Jetson Orin Nano, Bayesian optimization за сондажи и Национален геофонд.">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Николай Димитров лого" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Николай Димитров</span>
+          <span class="brand-role">Edge AI · Safety-Critical</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Отвори менюто" aria-expanded="false">МЕНЮ</button>
+      <div class="nav-wrapper">
+        <ul class="nav-links">
+          <li><a href="index.html">Начало</a></li>
+          <li><a href="focus.html">Фокус</a></li>
+          <li><a href="projects.html" class="active">Проекти</a></li>
+          <li><a href="research.html">Изследвания</a></li>
+          <li><a href="notes.html">Бележки</a></li>
+          <li><a href="lab.html">Лаборатория</a></li>
+          <li><a href="about.html">За мен</a></li>
+          <li><a href="consulting.html">Консултации</a></li>
+          <li><a href="now.html">Сега</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="../projects.html">EN</a>
+          <a href="projects.html" class="active">BG</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Казуси</div>
+          <h1>Проекти</h1>
+          <p class="lead">
+            Всеки проект е структуриран като инженерен казус: проблем → данни → метод → хардуер → резултати → публични ресурси.
+          </p>
+        </div>
+
+        <div class="hero-actions" style="margin-bottom: 2.5rem;">
+          <button class="btn btn-primary" data-filter="all">Всички проекти</button>
+          <button class="btn btn-secondary" data-filter="defense">Dual-Use Edge AI</button>
+          <button class="btn btn-secondary" data-filter="geo">Geo AI</button>
+        </div>
+
+        <article class="case-study" id="visdrone" data-domain="defense">
+          <div class="case-study-header">
+            <div>
+              <div class="tag-list" style="margin-bottom: 0.6rem;">
+                <span class="tag tag-cyan">Dual-Use Edge AI</span>
+                <span class="tag">Проект 01</span>
+                <span class="tag">Активен бенчмарк</span>
+              </div>
+              <h2>VisDrone на Jetson Orin Nano (INT8)</h2>
+            </div>
+            <div class="tag-list">
+              <span class="tag">TensorRT</span>
+              <span class="tag">Jetson Orin Nano</span>
+              <span class="tag">ONNX / INT8</span>
+            </div>
+          </div>
+
+          <div class="case-grid">
+            <div class="case-block">
+              <h4>Проблем</h4>
+              <p>Разпознаването на малки обекти от дрон изисква ниска латентност (&lt;30 ms) при строг бюджет за размер, тегло и енергия (SWaP), без облак.</p>
+            </div>
+            <div class="case-block">
+              <h4>Данни</h4>
+              <p>VisDrone2019-DET: въздушни изображения с малки, гъсто разположени и частично закрити обекти.</p>
+            </div>
+            <div class="case-block">
+              <h4>Метод</h4>
+              <p>INT8 калибрация и оптимизация с TensorRT, сравняваща FP32, FP16 и INT8 профили.</p>
+            </div>
+            <div class="case-block">
+              <h4>Хардуер</h4>
+              <p>NVIDIA Jetson Orin Nano (8GB, режими 7W и 15W) с измерване на температурата и реалната консумация.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Точност</th>
+                  <th>Режим</th>
+                  <th>Латентност (ms)</th>
+                  <th>mAP@0.5</th>
+                  <th>Консумация (W)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>FP16 (Базова)</td>
+                  <td>15W</td>
+                  <td>Измерва се</td>
+                  <td>Измерва се</td>
+                  <td>~12–15 W</td>
+                </tr>
+                <tr>
+                  <td>INT8 (Калибриран)</td>
+                  <td>15W</td>
+                  <td>Цел &lt; 25 ms</td>
+                  <td>Цел &lt; 1.5% спад</td>
+                  <td>~10–13 W</td>
+                </tr>
+                <tr>
+                  <td>INT8 (Икономичен)</td>
+                  <td>7W</td>
+                  <td>Цел &lt; 45 ms</td>
+                  <td>Цел &lt; 1.5% спад</td>
+                  <td>~6–7 W</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-footer">
+            <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">GitHub хранилище</a>
+            <a href="research.html" class="btn btn-secondary">Бележки по бенчмарка</a>
+          </div>
+        </article>
+
+        <article class="case-study" id="bo-drilling" data-domain="geo">
+          <div class="case-study-header">
+            <div>
+              <div class="tag-list" style="margin-bottom: 0.6rem;">
+                <span class="tag tag-emerald">Geo AI</span>
+                <span class="tag">Проект 02</span>
+                <span class="tag">Интерактивна демонстрация</span>
+              </div>
+              <h2>Bayesian optimization за сондажи</h2>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Gaussian Processes</span>
+              <span class="tag">BoTorch / GPyTorch</span>
+              <span class="tag">Hugging Face Space</span>
+            </div>
+          </div>
+
+          <div class="case-grid">
+            <div class="case-block">
+              <h4>Проблем</h4>
+              <p>Проучвателното сондиране е скъпо и необратимо. Статичните мрежи губят метри в нискоинформативни зони.</p>
+            </div>
+            <div class="case-block">
+              <h4>Данни</h4>
+              <p>Синтетични 2D/3D анизотропни рудни полета и исторически разпределения на сондажни проби.</p>
+            </div>
+            <div class="case-block">
+              <h4>Метод</h4>
+              <p>Gaussian Process модели с Matérn ядра и UCB / Expected Improvement стратегии за избор на следващ сондаж.</p>
+            </div>
+            <div class="case-block">
+              <h4>Хардуер / Среда</h4>
+              <p>Лек инференс, публикуван като интерактивна симулация в Hugging Face Space.</p>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <a href="contact.html" class="btn btn-secondary">Hugging Face Space (скоро)</a>
+            <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">GitHub хранилище</a>
+          </div>
+        </article>
+
+        <article class="case-study" id="geofond" data-domain="geo">
+          <div class="case-study-header">
+            <div>
+              <div class="tag-list" style="margin-bottom: 0.6rem;">
+                <span class="tag tag-amber">Глад за данни</span>
+                <span class="tag">Проект 03</span>
+                <span class="tag">Отворен набор</span>
+              </div>
+              <h2>Набор от данни от Националния геофонд</h2>
+            </div>
+            <div class="tag-list">
+              <span class="tag">OCR / Структуриране</span>
+              <span class="tag">Parquet</span>
+              <span class="tag">Hugging Face Datasets</span>
+            </div>
+          </div>
+
+          <div class="case-grid">
+            <div class="case-block">
+              <h4>Проблем</h4>
+              <p>Десетилетия ценни български геоложки проучвания са заключени в сканирани PDF-и и таблици, неизползваеми за ML.</p>
+            </div>
+            <div class="case-block">
+              <h4>Данни</h4>
+              <p>Архивни сондажни дневници, литоложки описания, таблици с анализи и координатни метаданни от Националния геофонд.</p>
+            </div>
+            <div class="case-block">
+              <h4>Метод</h4>
+              <p>Разпознаване на документи, нормализация, валидация на координати и стандартизация в Parquet/JSONL формат.</p>
+            </div>
+            <div class="case-block">
+              <h4>Резултати</h4>
+              <p>Отворен базов набор от данни за възпроизводими Geo AI бенчмаркове и регионално моделиране.</p>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <a href="contact.html" class="btn btn-secondary">Hugging Face Dataset (скоро)</a>
+            <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">Код за обработка</a>
+          </div>
+        </article>
+
+        <article class="case-study" id="drone-mag" data-domain="bridge">
+          <div class="case-study-header">
+            <div>
+              <div class="tag-list" style="margin-bottom: 0.6rem;">
+                <span class="tag tag-cyan">Мост</span>
+                <span class="tag tag-emerald">Следваща стъпка</span>
+              </div>
+              <h2>Прототип на магнитометър за дрон с обработка на борда</h2>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Магнитометрия</span>
+              <span class="tag">Edge филтриране</span>
+              <span class="tag">Dual-Use</span>
+            </div>
+          </div>
+          <p style="color: var(--text-secondary);">
+            Предстоящ хардуерен прототип, обединяващ двете направления: дрон-базиран магнитометър със синхронизиран IMU/GNSS запис и детекция на аномалии в реално време — приложим както за полезни изкопаеми, така и за откриване на UXO.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-meta">
+        <strong>Николай Димитров</strong> · Safety-Critical Edge AI &amp; Field Sensing<br>
+        <span>Отворен за проверени партньорства в отбраната и технологиите с двойна употреба.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a>
+        <a href="contact.html">LinkedIn</a>
+        <a href="contact.html">Hugging Face</a>
+        <a href="contact.html">ORCID</a>
+        <a href="mailto:nikidimitrow@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

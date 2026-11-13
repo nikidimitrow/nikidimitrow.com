@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Nikolay Dimitrow</title>
+  <meta name="description" content="Case studies in edge AI, VisDrone INT8 benchmarking, Bayesian optimization for drilling, and National Geofond dataset digitization.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.png" alt="Nikolay Dimitrow logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Nikolay Dimitrow</span>
+          <span class="brand-role">Edge AI · Safety-Critical</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <div class="nav-wrapper">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="focus.html">Focus</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="lab.html">Lab</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="consulting.html">Consulting</a></li>
+          <li><a href="now.html">Now</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="projects.html" class="active">EN</a>
+          <a href="bg/projects.html">BG</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Case Studies</div>
+          <h1>Projects</h1>
+          <p class="lead">
+            Every project is structured as an engineering case study: problem, data, method, hardware, measurable results, and public artifacts.
+          </p>
+        </div>
+
+        <div class="hero-actions" style="margin-bottom: 2.5rem;">
+          <button class="btn btn-primary" data-filter="all">All Projects</button>
+          <button class="btn btn-secondary" data-filter="defense">Dual-Use Edge AI</button>
+          <button class="btn btn-secondary" data-filter="geo">Geo AI</button>
+        </div>
+
+        <!-- Project 1: VisDrone -->
+        <article class="case-study" id="visdrone" data-domain="defense">
+          <div class="case-study-header">
+            <div>
+              <div class="tag-list" style="margin-bottom: 0.6rem;">
+                <span class="tag tag-cyan">Dual-Use Edge AI</span>
+                <span class="tag">Project 01</span>
+                <span class="tag">Active Benchmark</span>
+              </div>
+              <h2>VisDrone on Jetson Orin Nano (INT8)</h2>
+            </div>
+            <div class="tag-list">
+              <span class="tag">TensorRT</span>
+              <span class="tag">Jetson Orin Nano</span>
+              <span class="tag">ONNX / INT8</span>
+            </div>
+          </div>
+
+          <div class="case-grid">
+            <div class="case-block">
+              <h4>Problem</h4>
+              <p>Small-object aerial detection from UAVs requires low latency (&lt;30 ms) under strict SWaP (Size, Weight, and Power) limits without cloud offloading.</p>
+            </div>
+            <div class="case-block">
+              <h4>Data</h4>
+              <p>VisDrone2019-DET benchmark: high-altitude, oblique-angle drone imagery with dense, small, and partially occluded targets.</p>
+            </div>
+            <div class="case-block">
+              <h4>Method</h4>
+              <p>Post-training INT8 calibration (entropy &amp; minmax) and TensorRT engine optimization, comparing FP32, FP16, and INT8 trade-offs.</p>
+            </div>
+            <div class="case-block">
+              <h4>Hardware</h4>
+              <p>NVIDIA Jetson Orin Nano (8GB, 7W &amp; 15W power modes) with active thermal monitoring and INA3221 power rail telemetry.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Precision</th>
+                  <th>Power Mode</th>
+                  <th>Latency (ms)</th>
+                  <th>mAP@0.5</th>
+                  <th>Power Draw (W)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>FP16 (Baseline)</td>
+                  <td>15W</td>
+                  <td>TBD (Benchmarking)</td>
+                  <td>TBD</td>
+                  <td>~12–15 W</td>
+                </tr>
+                <tr>
+                  <td>INT8 (Calibrated)</td>
+                  <td>15W</td>
+                  <td>Target &lt; 25 ms</td>
+                  <td>Target &lt; 1.5% drop</td>
+                  <td>~10–13 W</td>
+                </tr>
+                <tr>
+                  <td>INT8 (Low-Power)</td>
+                  <td>7W</td>
+                  <td>Target &lt; 45 ms</td>
+                  <td>Target &lt; 1.5% drop</td>
+                  <td>~6–7 W</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-footer">
+            <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Repository</a>
+            <a href="research.html" class="btn btn-secondary">Benchmark Notes</a>
+          </div>
+        </article>
+
+        <!-- Project 2: Bayesian Optimization -->
+        <article class="case-study" id="bo-drilling" data-domain="geo">
+          <div class="case-study-header">
+            <div>
+              <div class="tag-list" style="margin-bottom: 0.6rem;">
+                <span class="tag tag-emerald">Geo AI</span>
+                <span class="tag">Project 02</span>
+                <span class="tag">Interactive Demo</span>
+              </div>
+              <h2>Bayesian Optimization for Sequential Drilling</h2>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Gaussian Processes</span>
+              <span class="tag">BoTorch / GPyTorch</span>
+              <span class="tag">Hugging Face Space</span>
+            </div>
+          </div>
+
+          <div class="case-grid">
+            <div class="case-block">
+              <h4>Problem</h4>
+              <p>Exploratory drilling is expensive and irreversible. Static grid drilling wastes meters in low-information zones.</p>
+            </div>
+            <div class="case-block">
+              <h4>Data</h4>
+              <p>Synthetic 2D/3D anisotropic ore-grade fields and historical borehole assay distributions with realistic spatial correlation.</p>
+            </div>
+            <div class="case-block">
+              <h4>Method</h4>
+              <p>Gaussian Process surrogate modeling with Matérn kernels and Upper Confidence Bound (UCB) / Expected Improvement acquisition.</p>
+            </div>
+            <div class="case-block">
+              <h4>Hardware / Runtime</h4>
+              <p>Lightweight CPU/edge-capable inference deployed as an interactive simulation on Hugging Face Spaces.</p>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <a href="contact.html" class="btn btn-secondary">Hugging Face Space (Link Soon)</a>
+            <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Repository</a>
+          </div>
+        </article>
+
+        <!-- Project 3: National Geofond Dataset -->
+        <article class="case-study" id="geofond" data-domain="geo">
+          <div class="case-study-header">
+            <div>
+              <div class="tag-list" style="margin-bottom: 0.6rem;">
+                <span class="tag tag-amber">Data Foundation</span>
+                <span class="tag">Project 03</span>
+                <span class="tag">Open Dataset</span>
+              </div>
+              <h2>National Geofond Digitized Dataset</h2>
+            </div>
+            <div class="tag-list">
+              <span class="tag">OCR / Structuring</span>
+              <span class="tag">Parquet</span>
+              <span class="tag">Hugging Face Datasets</span>
+            </div>
+          </div>
+
+          <div class="case-grid">
+            <div class="case-block">
+              <h4>Problem</h4>
+              <p>Decades of valuable Bulgarian geological survey data remain locked in scanned PDFs, tables, and archival reports unusable by modern ML pipelines.</p>
+            </div>
+            <div class="case-block">
+              <h4>Data</h4>
+              <p>Archival borehole logs, lithological descriptions, assay tables, and coordinate metadata from the National Geofond.</p>
+            </div>
+            <div class="case-block">
+              <h4>Method</h4>
+              <p>Document layout parsing, domain-specific normalization, coordinate validation, and schema standardization into clean Parquet/JSONL splits.</p>
+            </div>
+            <div class="case-block">
+              <h4>Results</h4>
+              <p>Foundational open dataset enabling reproducible Geo AI benchmarks and regional subsurface modeling.</p>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <a href="contact.html" class="btn btn-secondary">Hugging Face Dataset (Link Soon)</a>
+            <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">Processing Pipeline</a>
+          </div>
+        </article>
+
+        <!-- Future Bridge Project -->
+        <article class="case-study" id="drone-mag" data-domain="bridge">
+          <div class="case-study-header">
+            <div>
+              <div class="tag-list" style="margin-bottom: 0.6rem;">
+                <span class="tag tag-cyan">Bridge Project</span>
+                <span class="tag tag-emerald">Roadmap</span>
+              </div>
+              <h2>Drone Magnetometer Prototype with On-Device Processing</h2>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Magnetometry</span>
+              <span class="tag">Edge Filtering</span>
+              <span class="tag">Dual-Use</span>
+            </div>
+          </div>
+          <p style="color: var(--text-secondary);">
+            Upcoming hardware-in-the-loop prototype uniting both domains: a UAV-borne magnetometer payload with synchronized IMU/GNSS logging and real-time on-device anomaly detection—applicable to both mineral exploration and UXO surveying.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-meta">
+        <strong>Nikolay Dimitrow</strong> · Safety-Critical Edge AI &amp; Field Sensing<br>
+        <span>Open to vetted defense &amp; dual-use collaborations.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a>
+        <a href="contact.html">LinkedIn</a>
+        <a href="contact.html">Hugging Face</a>
+        <a href="contact.html">ORCID</a>
+        <a href="mailto:nikidimitrow@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
