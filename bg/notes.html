@@ -4,7 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Бележки — Николай Димитров</title>
-  <meta name="description" content="Теоретични обяснения и технически бележки за Edge AI, Bayesian optimization и полеви сензори.">
+  <meta name="description" content="Технически бележки в четири серии: Cheap Information, Build Log, Edge AI Field Notes и Safety-Critical AI.">
+  <link rel="canonical" href="https://nikidimitrow.com/bg/notes.html">
+  <link rel="alternate" hreflang="en" href="https://nikidimitrow.com/notes.html">
+  <link rel="alternate" hreflang="bg" href="https://nikidimitrow.com/bg/notes.html">
+  <link rel="alternate" hreflang="x-default" href="https://nikidimitrow.com/notes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Бележки — Николай Димитров">
+  <meta property="og:description" content="Четири серии бележки: Cheap Information, Build Log, Edge AI Field Notes и Safety-Critical AI.">
+  <meta property="og:url" content="https://nikidimitrow.com/bg/notes.html">
+  <meta property="og:image" content="https://nikidimitrow.com/assets/images/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Бележки — Николай Димитров">
+  <meta name="twitter:description" content="Технически бележки за Geo AI, Edge AI и системи, критични за безопасността.">
+  <link rel="alternate" type="application/atom+xml" title="Бележки — Николай Димитров" href="../feed.xml">
   <link rel="icon" type="image/png" href="../assets/images/logo.png">
   <link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -44,67 +57,89 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Инженерни бележки</div>
-          <h1>Блог и теоретични обяснения</h1>
+          <div class="eyebrow">Инженерни бележки · <a href="../feed.xml">Atom Feed</a></div>
+          <h1>Бележки и серии</h1>
           <p class="lead">
-            Обяснения от първи принципи за математиката, хардуерните ограничения и моделите за безопасност зад AI на терен.
+            Организирани в четири серии: <strong>Cheap Information</strong> (теория: стойност на информацията, Bayesian optimization, Gaussian processes и кригинг, multi-fidelity), <strong>Build Log</strong> (дневници на проектите), <strong>Edge AI Field Notes</strong> (хардуер, квантуване, бенчмаркове) и <strong>Safety-Critical AI</strong> (от ISO 26262 до AI на терен).
           </p>
         </div>
 
+        <div class="hero-actions" style="margin-bottom: 2.5rem;">
+          <button class="btn btn-primary" data-series-filter="all">Всички серии</button>
+          <button class="btn btn-secondary" data-series-filter="cheap-information">Cheap Information</button>
+          <button class="btn btn-secondary" data-series-filter="build-log">Build Log</button>
+          <button class="btn btn-secondary" data-series-filter="edge-ai-field-notes">Edge AI Field Notes</button>
+          <button class="btn btn-secondary" data-series-filter="safety-critical-ai">Safety-Critical AI</button>
+        </div>
+
         <div class="grid-2">
-          <article class="card">
+          <article class="card" data-series="cheap-information">
             <div class="tag-list">
-              <span class="tag tag-cyan">Edge системи</span>
-              <span class="tag">Safety-Critical</span>
+              <span class="tag tag-emerald">Cheap Information</span>
+              <span class="tag tag-amber">DRAFT</span>
             </div>
-            <h3>Защо облачният AI не работи на терен — и какво го замества</h3>
+            <h3>What should we measure next? A systems architect's road into Geo AI</h3>
             <p>
-              Латентността, липсата на връзка и енергийните ограничения налагат интелигентността да е върху сензора. Как изолацията с хипервизори от автомобилната индустрия се пренася към дронове и полеви системи.
+              Защо геоложкото проучване е задача за последователни решения при несигурност и как стойността на информацията свързва автомобилната безопасност с подземните сензори.
             </p>
             <div class="card-footer">
-              <span class="tag">Предстояща статия</span>
+              <span class="tag">Очаквайте скоро · Чернова</span>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-series="cheap-information">
             <div class="tag-list">
-              <span class="tag tag-emerald">Geo AI</span>
-              <span class="tag">Bayesian Opt</span>
+              <span class="tag tag-emerald">Cheap Information</span>
+              <span class="tag tag-amber">DRAFT</span>
             </div>
-            <h3>Gaussian Processes при скъпи подземни проби</h3>
+            <h3>Kriging is a Gaussian process: the bridge between geostatistics and ML</h3>
             <p>
-              Балансът между изследване и експлоатация, когато всяка нова точка струва хиляди евро в сондажни метри.
+              Математическата еквивалентност между класическия кригинг и регресията с Gaussian Process, и какво отключва тя за multi-fidelity пробонабиране.
             </p>
             <div class="card-footer">
-              <span class="tag">Предстояща статия</span>
+              <span class="tag">Очаквайте скоро · Чернова</span>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-series="build-log">
             <div class="tag-list">
-              <span class="tag tag-cyan">Квантуване</span>
-              <span class="tag">TensorRT</span>
+              <span class="tag tag-cyan">Build Log</span>
+              <span class="tag tag-amber">DRAFT</span>
             </div>
-            <h3>Подводни камъни при INT8 калибрация за малки въздушни цели</h3>
+            <h3>Mining a library: extracting Bulgarian mineral deposits with LLMs</h3>
             <p>
-              Защо наивната калибрация унищожава детекцията на 12-пикселови обекти във VisDrone и как да мерим реалната точност на ват.
+              Бележки от изграждането на конвейер за извличане и валидация на структурирани данни от десетилетия българска геоложка литература.
             </p>
             <div class="card-footer">
-              <span class="tag">Предстояща статия</span>
+              <span class="tag">Очаквайте скоро · Чернова</span>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-series="edge-ai-field-notes">
             <div class="tag-list">
-              <span class="tag tag-amber">Dual-Use</span>
-              <span class="tag">Геофизика</span>
+              <span class="tag tag-cyan">Edge AI Field Notes</span>
+              <span class="tag tag-amber">DRAFT</span>
             </div>
-            <h3>Магнитометрия от дрон: от рудни тела до UXO</h3>
+            <h3>INT8 on Jetson Orin Nano: VisDrone latency vs. accuracy</h3>
             <p>
-              Източници на шум, магнитна компенсация на платформата и диполна инверсия в реално време върху вграден хардуер.
+              Измерване на компромисите при TensorRT INT8 калибрация за малки въздушни цели в режими 7W и 15W, включително термален тротлинг и реална консумация.
             </p>
             <div class="card-footer">
-              <span class="tag">Предстояща статия</span>
+              <span class="tag">Очаквайте скоро · Чернова</span>
+            </div>
+          </article>
+
+          <article class="card" data-series="safety-critical-ai">
+            <div class="tag-list">
+              <span class="tag">Safety-Critical AI</span>
+              <span class="tag tag-amber">DRAFT</span>
+            </div>
+            <h3>From ISO 26262 to AI in the field: what safety engineers know that ML engineers don't</h3>
+            <p>
+              Защо метриките за точност не са доказателство за безопасност и как изолацията, рантайм мониторите и анализът на отказите важат на терен.
+            </p>
+            <div class="card-footer">
+              <span class="tag">Очаквайте скоро · Чернова</span>
             </div>
           </article>
         </div>
@@ -120,10 +155,8 @@
       </div>
       <div class="footer-links">
         <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a>
-        <a href="contact.html">LinkedIn</a>
-        <a href="contact.html">Hugging Face</a>
-        <a href="contact.html">ORCID</a>
-        <a href="mailto:nikidimitrow@gmail.com">Email</a>
+        <a href="../feed.xml">RSS</a>
+        <span class="obf-email" data-u="nikidimitrow" data-d="gmail.com" data-label="Email"><noscript>&#110;&#105;&#107;&#105;&#100;&#105;&#109;&#105;&#116;&#114;&#111;&#119;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</noscript></span>
       </div>
     </div>
   </footer>

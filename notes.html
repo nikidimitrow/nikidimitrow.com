@@ -4,7 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notes — Nikolay Dimitrow</title>
-  <meta name="description" content="Technical notes on safety-critical AI, INT8 quantization, Bayesian optimization, and field sensor architectures.">
+  <meta name="description" content="Technical notes organized into four series: Cheap Information, Build Log, Edge AI Field Notes, and Safety-Critical AI.">
+  <link rel="canonical" href="https://nikidimitrow.com/notes.html">
+  <link rel="alternate" hreflang="en" href="https://nikidimitrow.com/notes.html">
+  <link rel="alternate" hreflang="bg" href="https://nikidimitrow.com/bg/notes.html">
+  <link rel="alternate" hreflang="x-default" href="https://nikidimitrow.com/notes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Notes — Nikolay Dimitrow">
+  <meta property="og:description" content="Cheap Information, Build Log, Edge AI Field Notes, and Safety-Critical AI.">
+  <meta property="og:url" content="https://nikidimitrow.com/notes.html">
+  <meta property="og:image" content="https://nikidimitrow.com/assets/images/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Notes — Nikolay Dimitrow">
+  <meta name="twitter:description" content="Cheap Information, Build Log, Edge AI Field Notes, and Safety-Critical AI.">
+  <link rel="alternate" type="application/atom+xml" title="Notes — Nikolay Dimitrow" href="feed.xml">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -44,67 +57,89 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Engineering Notes</div>
-          <h1>Notes &amp; Theoretical Deep Dives</h1>
+          <div class="eyebrow">Engineering Notes · <a href="feed.xml">Atom Feed</a></div>
+          <h1>Notes &amp; Series</h1>
           <p class="lead">
-            First-principles explanations of the mathematics, hardware constraints, and safety patterns behind field-deployed AI.
+            Organized into four series: <strong>Cheap Information</strong> (theory: value of information, Bayesian optimization, Gaussian processes and kriging, multi-fidelity), <strong>Build Log</strong> (project diaries), <strong>Edge AI Field Notes</strong> (hardware, quantization, benchmarks), and <strong>Safety-Critical AI</strong> (from ISO 26262 to AI in the field).
           </p>
         </div>
 
+        <div class="hero-actions" style="margin-bottom: 2.5rem;">
+          <button class="btn btn-primary" data-series-filter="all">All Series</button>
+          <button class="btn btn-secondary" data-series-filter="cheap-information">Cheap Information</button>
+          <button class="btn btn-secondary" data-series-filter="build-log">Build Log</button>
+          <button class="btn btn-secondary" data-series-filter="edge-ai-field-notes">Edge AI Field Notes</button>
+          <button class="btn btn-secondary" data-series-filter="safety-critical-ai">Safety-Critical AI</button>
+        </div>
+
         <div class="grid-2">
-          <article class="card">
+          <article class="card" data-series="cheap-information">
             <div class="tag-list">
-              <span class="tag tag-cyan">Edge Systems</span>
-              <span class="tag">Safety-Critical</span>
+              <span class="tag tag-emerald">Cheap Information</span>
+              <span class="tag tag-amber">DRAFT</span>
             </div>
-            <h3>Why Cloud AI Fails in the Field—and What Replaces It</h3>
+            <h3>What should we measure next? A systems architect's road into Geo AI</h3>
             <p>
-              Latency jitter, RF denial, and power budgets force intelligence onto the sensor node. How automotive hypervisor partitioning translates to autonomous field payloads.
+              Why geological exploration is a sequential decision problem under uncertainty, and how value-of-information thinking bridges automotive safety engineering and subsurface sensing.
             </p>
             <div class="card-footer">
-              <span class="tag">Upcoming Essay</span>
+              <span class="tag">Coming soon · Draft</span>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-series="cheap-information">
             <div class="tag-list">
-              <span class="tag tag-emerald">Geo AI</span>
-              <span class="tag">Bayesian Opt</span>
+              <span class="tag tag-emerald">Cheap Information</span>
+              <span class="tag tag-amber">DRAFT</span>
             </div>
-            <h3>Gaussian Processes for Expensive Subsurface Queries</h3>
+            <h3>Kriging is a Gaussian process: the bridge between geostatistics and ML</h3>
             <p>
-              Balancing exploration vs. exploitation when every data point costs thousands of euros in drilling meters.
+              Deriving the mathematical equivalence between classical ordinary/universal kriging and Gaussian Process regression, and what it unlocks for multi-fidelity sampling.
             </p>
             <div class="card-footer">
-              <span class="tag">Upcoming Essay</span>
+              <span class="tag">Coming soon · Draft</span>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-series="build-log">
             <div class="tag-list">
-              <span class="tag tag-cyan">Quantization</span>
-              <span class="tag">TensorRT</span>
+              <span class="tag tag-cyan">Build Log</span>
+              <span class="tag tag-amber">DRAFT</span>
             </div>
-            <h3>INT8 Calibration Pitfalls on Small Aerial Targets</h3>
+            <h3>Mining a library: extracting Bulgarian mineral deposits with LLMs</h3>
             <p>
-              Why naive calibration destroys recall on 12-pixel VisDrone objects, and how to measure true accuracy-per-watt on Jetson Orin.
+              Field notes from building an extraction and validation pipeline over decades of Bulgarian geological literature, handling legacy terminology, coordinates, and schema checks.
             </p>
             <div class="card-footer">
-              <span class="tag">Upcoming Essay</span>
+              <span class="tag">Coming soon · Draft</span>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-series="edge-ai-field-notes">
             <div class="tag-list">
-              <span class="tag tag-amber">Dual-Use</span>
-              <span class="tag">Geophysics</span>
+              <span class="tag tag-cyan">Edge AI Field Notes</span>
+              <span class="tag tag-amber">DRAFT</span>
             </div>
-            <h3>Magnetometry from Drones: From Ore Bodies to UXO</h3>
+            <h3>INT8 on Jetson Orin Nano: VisDrone latency vs. accuracy</h3>
             <p>
-              Noise sources, platform magnetic compensation, and real-time dipole inversion on embedded hardware.
+              Measuring TensorRT INT8 calibration trade-offs on small aerial targets across 7W and 15W power modes, including thermal throttling and real power-rail telemetry.
             </p>
             <div class="card-footer">
-              <span class="tag">Upcoming Essay</span>
+              <span class="tag">Coming soon · Draft</span>
+            </div>
+          </article>
+
+          <article class="card" data-series="safety-critical-ai">
+            <div class="tag-list">
+              <span class="tag">Safety-Critical AI</span>
+              <span class="tag tag-amber">DRAFT</span>
+            </div>
+            <h3>From ISO 26262 to AI in the field: what safety engineers know that ML engineers don't</h3>
+            <p>
+              Why accuracy metrics are not safety evidence, and how domain isolation, runtime monitors, and failure-mode analysis apply when deploying models on real hardware.
+            </p>
+            <div class="card-footer">
+              <span class="tag">Coming soon · Draft</span>
             </div>
           </article>
         </div>
@@ -120,10 +155,8 @@
       </div>
       <div class="footer-links">
         <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a>
-        <a href="contact.html">LinkedIn</a>
-        <a href="contact.html">Hugging Face</a>
-        <a href="contact.html">ORCID</a>
-        <a href="mailto:nikidimitrow@gmail.com">Email</a>
+        <a href="feed.xml">RSS</a>
+        <span class="obf-email" data-u="nikidimitrow" data-d="gmail.com" data-label="Email"><noscript>&#110;&#105;&#107;&#105;&#100;&#105;&#109;&#105;&#116;&#114;&#111;&#119;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</noscript></span>
       </div>
     </div>
   </footer>

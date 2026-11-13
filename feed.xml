@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Notes — Nikolay Dimitrow</title>
+  <subtitle>Cheap Information, Build Log, Edge AI Field Notes, and Safety-Critical AI.</subtitle>
+  <link href="https://nikidimitrow.com/feed.xml" rel="self" />
+  <link href="https://nikidimitrow.com/notes.html" />
+  <id>https://nikidimitrow.com/notes.html</id>
+  <updated>2026-11-13T10:50:00+02:00</updated>
+  <author>
+    <name>Nikolay Dimitrow</name>
+  </author>
+  <entry>
+    <title>Notes Index (Drafts in Progress)</title>
+    <link href="https://nikidimitrow.com/notes.html" />
+    <id>https://nikidimitrow.com/notes.html</id>
+    <updated>2026-11-13T10:50:00+02:00</updated>
+    <summary>Four series launched: Cheap Information, Build Log, Edge AI Field Notes, and Safety-Critical AI. Five initial drafts are in progress.</summary>
+  </entry>
+</feed>

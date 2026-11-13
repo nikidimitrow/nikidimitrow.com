@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /notes/drafts/
+Disallow: /notes/post-template.html
+
+Sitemap: https://nikidimitrow.com/sitemap.xml

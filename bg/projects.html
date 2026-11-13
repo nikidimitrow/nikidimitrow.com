@@ -4,7 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Проекти — Николай Димитров</title>
-  <meta name="description" content="Казуси в Edge AI: VisDrone INT8 на Jetson Orin Nano, Bayesian optimization за сондажи и Национален геофонд.">
+  <meta name="description" content="Инженерни казуси и пътна карта: VisDrone INT8 на Jetson Orin Nano, Национален геофонд, Bayesian optimization за сондажи и дрон магнитометрия.">
+  <link rel="canonical" href="https://nikidimitrow.com/bg/projects.html">
+  <link rel="alternate" hreflang="en" href="https://nikidimitrow.com/projects.html">
+  <link rel="alternate" hreflang="bg" href="https://nikidimitrow.com/bg/projects.html">
+  <link rel="alternate" hreflang="x-default" href="https://nikidimitrow.com/projects.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Проекти — Николай Димитров">
+  <meta property="og:description" content="Казуси в Edge AI, VisDrone INT8 бенчмаркинг, Bayesian optimization за сондажи и Национален геофонд.">
+  <meta property="og:url" content="https://nikidimitrow.com/bg/projects.html">
+  <meta property="og:image" content="https://nikidimitrow.com/assets/images/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Проекти — Николай Димитров">
+  <meta name="twitter:description" content="Казуси в Edge AI, VisDrone INT8 бенчмаркинг и Geo AI.">
   <link rel="icon" type="image/png" href="../assets/images/logo.png">
   <link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -44,7 +56,7 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Казуси</div>
+          <div class="eyebrow">Казуси и пътна карта</div>
           <h1>Проекти</h1>
           <p class="lead">
             Всеки проект е структуриран като инженерен казус: проблем → данни → метод → хардуер → резултати → публични ресурси.
@@ -57,15 +69,16 @@
           <button class="btn btn-secondary" data-filter="geo">Geo AI</button>
         </div>
 
+        <!-- E1 -->
         <article class="case-study" id="visdrone" data-domain="defense">
           <div class="case-study-header">
             <div>
               <div class="tag-list" style="margin-bottom: 0.6rem;">
                 <span class="tag tag-cyan">Dual-Use Edge AI</span>
-                <span class="tag">Проект 01</span>
-                <span class="tag">Активен бенчмарк</span>
+                <span class="tag">E1</span>
+                <span class="status-badge status-building">в разработка</span>
               </div>
-              <h2>VisDrone на Jetson Orin Nano (INT8)</h2>
+              <h2>VisDrone INT8 бенчмарк (Jetson Orin Nano)</h2>
             </div>
             <div class="tag-list">
               <span class="tag">TensorRT</span>
@@ -136,55 +149,14 @@
           </div>
         </article>
 
-        <article class="case-study" id="bo-drilling" data-domain="geo">
-          <div class="case-study-header">
-            <div>
-              <div class="tag-list" style="margin-bottom: 0.6rem;">
-                <span class="tag tag-emerald">Geo AI</span>
-                <span class="tag">Проект 02</span>
-                <span class="tag">Интерактивна демонстрация</span>
-              </div>
-              <h2>Bayesian optimization за сондажи</h2>
-            </div>
-            <div class="tag-list">
-              <span class="tag">Gaussian Processes</span>
-              <span class="tag">BoTorch / GPyTorch</span>
-              <span class="tag">Hugging Face Space</span>
-            </div>
-          </div>
-
-          <div class="case-grid">
-            <div class="case-block">
-              <h4>Проблем</h4>
-              <p>Проучвателното сондиране е скъпо и необратимо. Статичните мрежи губят метри в нискоинформативни зони.</p>
-            </div>
-            <div class="case-block">
-              <h4>Данни</h4>
-              <p>Синтетични 2D/3D анизотропни рудни полета и исторически разпределения на сондажни проби.</p>
-            </div>
-            <div class="case-block">
-              <h4>Метод</h4>
-              <p>Gaussian Process модели с Matérn ядра и UCB / Expected Improvement стратегии за избор на следващ сондаж.</p>
-            </div>
-            <div class="case-block">
-              <h4>Хардуер / Среда</h4>
-              <p>Лек инференс, публикуван като интерактивна симулация в Hugging Face Space.</p>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            <a href="contact.html" class="btn btn-secondary">Hugging Face Space (скоро)</a>
-            <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">GitHub хранилище</a>
-          </div>
-        </article>
-
+        <!-- G1 -->
         <article class="case-study" id="geofond" data-domain="geo">
           <div class="case-study-header">
             <div>
               <div class="tag-list" style="margin-bottom: 0.6rem;">
-                <span class="tag tag-amber">Глад за данни</span>
-                <span class="tag">Проект 03</span>
-                <span class="tag">Отворен набор</span>
+                <span class="tag tag-amber">Основа от данни</span>
+                <span class="tag">G1</span>
+                <span class="status-badge status-building">в разработка</span>
               </div>
               <h2>Набор от данни от Националния геофонд</h2>
             </div>
@@ -215,28 +187,103 @@
           </div>
 
           <div class="card-footer">
-            <a href="contact.html" class="btn btn-secondary">Hugging Face Dataset (скоро)</a>
+            <span class="tag">Hugging Face Dataset: [URL]</span>
             <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">Код за обработка</a>
           </div>
         </article>
 
+        <!-- G5 -->
+        <article class="case-study" id="bo-drilling" data-domain="geo">
+          <div class="case-study-header">
+            <div>
+              <div class="tag-list" style="margin-bottom: 0.6rem;">
+                <span class="tag tag-emerald">Geo AI</span>
+                <span class="tag">G5</span>
+                <span class="status-badge status-building">в разработка</span>
+              </div>
+              <h2>Bayesian optimization за сондажи</h2>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Gaussian Processes</span>
+              <span class="tag">BoTorch / GPyTorch</span>
+              <span class="tag">Hugging Face Space</span>
+            </div>
+          </div>
+
+          <div class="case-grid">
+            <div class="case-block">
+              <h4>Проблем</h4>
+              <p>Проучвателното сондиране е скъпо и необратимо. Статичните мрежи губят метри в нискоинформативни зони.</p>
+            </div>
+            <div class="case-block">
+              <h4>Данни</h4>
+              <p>Синтетични 2D/3D анизотропни рудни полета и исторически разпределения на сондажни проби, последвани от полеви данни.</p>
+            </div>
+            <div class="case-block">
+              <h4>Метод</h4>
+              <p>Gaussian Process модели с Matérn ядра и UCB / Expected Improvement стратегии за избор на следващ сондаж.</p>
+            </div>
+            <div class="case-block">
+              <h4>Хардуер / Среда</h4>
+              <p>Лек инференс, публикуван като интерактивна симулация в Hugging Face Space.</p>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <span class="tag">Hugging Face Space: [URL]</span>
+            <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">GitHub хранилище</a>
+          </div>
+        </article>
+
+        <!-- G2, G3, G4 -->
+        <div class="grid-3" style="margin-bottom: 2rem;">
+          <article class="card" id="deposits-llm" data-domain="geo">
+            <div class="tag-list">
+              <span class="tag">G2</span>
+              <span class="status-badge status-planned">планиран</span>
+            </div>
+            <h3>Български находища от научната литература</h3>
+            <p>Извличане на структурирани данни за находища от десетилетия българска геоложка литература с LLM.</p>
+          </article>
+
+          <article class="card" id="pxrf-icp" data-domain="geo">
+            <div class="tag-list">
+              <span class="tag">G3</span>
+              <span class="status-badge status-planned">планиран</span>
+            </div>
+            <h3>Евтино срещу точно: pXRF → ICP</h3>
+            <p>Калибриране на ръчен XRF към акредитирани ICP-OES анализи с оценка на несигурността.</p>
+          </article>
+
+          <article class="card" id="automated-mineralogy" data-domain="geo">
+            <div class="tag-list">
+              <span class="tag">G4</span>
+              <span class="status-badge status-planned">планиран</span>
+            </div>
+            <h3>Нискобюджетна автоматизирана минералогия</h3>
+            <p>Сегментация на минерали от SEM-BSE/EDS изображения, валидирана с рентгенова дифракция.</p>
+          </article>
+        </div>
+
+        <!-- B1 -->
         <article class="case-study" id="drone-mag" data-domain="bridge">
           <div class="case-study-header">
             <div>
               <div class="tag-list" style="margin-bottom: 0.6rem;">
                 <span class="tag tag-cyan">Мост</span>
-                <span class="tag tag-emerald">Следваща стъпка</span>
+                <span class="tag">B1</span>
+                <span class="status-badge status-planned">планиран</span>
               </div>
-              <h2>Прототип на магнитометър за дрон с обработка на борда</h2>
+              <h2>Edge-AI магнитометрия с дрон</h2>
             </div>
             <div class="tag-list">
               <span class="tag">Магнитометрия</span>
-              <span class="tag">Edge филтриране</span>
+              <span class="tag">Отворен хардуер</span>
               <span class="tag">Dual-Use</span>
             </div>
           </div>
           <p style="color: var(--text-secondary);">
-            Предстоящ хардуерен прототип, обединяващ двете направления: дрон-базиран магнитометър със синхронизиран IMU/GNSS запис и детекция на аномалии в реално време — приложим както за полезни изкопаеми, така и за откриване на UXO.
+            Отворен хардуер за магнитометър с детекция на аномалии на борда — един стек, две мисии (проучване на полезни изкопаеми и откриване на UXO).
           </p>
         </article>
       </div>
@@ -251,10 +298,8 @@
       </div>
       <div class="footer-links">
         <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a>
-        <a href="contact.html">LinkedIn</a>
-        <a href="contact.html">Hugging Face</a>
-        <a href="contact.html">ORCID</a>
-        <a href="mailto:nikidimitrow@gmail.com">Email</a>
+        <a href="../feed.xml">RSS</a>
+        <span class="obf-email" data-u="nikidimitrow" data-d="gmail.com" data-label="Email"><noscript>&#110;&#105;&#107;&#105;&#100;&#105;&#109;&#105;&#116;&#114;&#111;&#119;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</noscript></span>
       </div>
     </div>
   </footer>

@@ -4,7 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Nikolay Dimitrow</title>
-  <meta name="description" content="Case studies in edge AI, VisDrone INT8 benchmarking, Bayesian optimization for drilling, and National Geofond dataset digitization.">
+  <meta name="description" content="Engineering case studies and roadmap: VisDrone INT8 on Jetson Orin Nano, National Geofond dataset, Drilling Bayesian Optimization, and Edge-AI Drone Magnetometry.">
+  <link rel="canonical" href="https://nikidimitrow.com/projects.html">
+  <link rel="alternate" hreflang="en" href="https://nikidimitrow.com/projects.html">
+  <link rel="alternate" hreflang="bg" href="https://nikidimitrow.com/bg/projects.html">
+  <link rel="alternate" hreflang="x-default" href="https://nikidimitrow.com/projects.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects — Nikolay Dimitrow">
+  <meta property="og:description" content="Case studies in edge AI, VisDrone INT8 benchmarking, Bayesian optimization for drilling, and geoscience datasets.">
+  <meta property="og:url" content="https://nikidimitrow.com/projects.html">
+  <meta property="og:image" content="https://nikidimitrow.com/assets/images/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Projects — Nikolay Dimitrow">
+  <meta name="twitter:description" content="Case studies in edge AI, VisDrone INT8 benchmarking, and Geo AI.">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -44,7 +56,7 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Case Studies</div>
+          <div class="eyebrow">Case Studies &amp; Roadmap</div>
           <h1>Projects</h1>
           <p class="lead">
             Every project is structured as an engineering case study: problem, data, method, hardware, measurable results, and public artifacts.
@@ -57,16 +69,16 @@
           <button class="btn btn-secondary" data-filter="geo">Geo AI</button>
         </div>
 
-        <!-- Project 1: VisDrone -->
+        <!-- E1: VisDrone -->
         <article class="case-study" id="visdrone" data-domain="defense">
           <div class="case-study-header">
             <div>
               <div class="tag-list" style="margin-bottom: 0.6rem;">
                 <span class="tag tag-cyan">Dual-Use Edge AI</span>
-                <span class="tag">Project 01</span>
-                <span class="tag">Active Benchmark</span>
+                <span class="tag">E1</span>
+                <span class="status-badge status-building">building</span>
               </div>
-              <h2>VisDrone on Jetson Orin Nano (INT8)</h2>
+              <h2>VisDrone INT8 Benchmark (Jetson Orin Nano)</h2>
             </div>
             <div class="tag-list">
               <span class="tag">TensorRT</span>
@@ -137,59 +149,16 @@
           </div>
         </article>
 
-        <!-- Project 2: Bayesian Optimization -->
-        <article class="case-study" id="bo-drilling" data-domain="geo">
-          <div class="case-study-header">
-            <div>
-              <div class="tag-list" style="margin-bottom: 0.6rem;">
-                <span class="tag tag-emerald">Geo AI</span>
-                <span class="tag">Project 02</span>
-                <span class="tag">Interactive Demo</span>
-              </div>
-              <h2>Bayesian Optimization for Sequential Drilling</h2>
-            </div>
-            <div class="tag-list">
-              <span class="tag">Gaussian Processes</span>
-              <span class="tag">BoTorch / GPyTorch</span>
-              <span class="tag">Hugging Face Space</span>
-            </div>
-          </div>
-
-          <div class="case-grid">
-            <div class="case-block">
-              <h4>Problem</h4>
-              <p>Exploratory drilling is expensive and irreversible. Static grid drilling wastes meters in low-information zones.</p>
-            </div>
-            <div class="case-block">
-              <h4>Data</h4>
-              <p>Synthetic 2D/3D anisotropic ore-grade fields and historical borehole assay distributions with realistic spatial correlation.</p>
-            </div>
-            <div class="case-block">
-              <h4>Method</h4>
-              <p>Gaussian Process surrogate modeling with Matérn kernels and Upper Confidence Bound (UCB) / Expected Improvement acquisition.</p>
-            </div>
-            <div class="case-block">
-              <h4>Hardware / Runtime</h4>
-              <p>Lightweight CPU/edge-capable inference deployed as an interactive simulation on Hugging Face Spaces.</p>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            <a href="contact.html" class="btn btn-secondary">Hugging Face Space (Link Soon)</a>
-            <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Repository</a>
-          </div>
-        </article>
-
-        <!-- Project 3: National Geofond Dataset -->
+        <!-- G1: National Geofond Dataset -->
         <article class="case-study" id="geofond" data-domain="geo">
           <div class="case-study-header">
             <div>
               <div class="tag-list" style="margin-bottom: 0.6rem;">
                 <span class="tag tag-amber">Data Foundation</span>
-                <span class="tag">Project 03</span>
-                <span class="tag">Open Dataset</span>
+                <span class="tag">G1</span>
+                <span class="status-badge status-building">building</span>
               </div>
-              <h2>National Geofond Digitized Dataset</h2>
+              <h2>National Geofond Dataset</h2>
             </div>
             <div class="tag-list">
               <span class="tag">OCR / Structuring</span>
@@ -218,29 +187,103 @@
           </div>
 
           <div class="card-footer">
-            <a href="contact.html" class="btn btn-secondary">Hugging Face Dataset (Link Soon)</a>
+            <span class="tag">Hugging Face Dataset: [URL]</span>
             <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">Processing Pipeline</a>
           </div>
         </article>
 
-        <!-- Future Bridge Project -->
+        <!-- G5: Bayesian Optimization -->
+        <article class="case-study" id="bo-drilling" data-domain="geo">
+          <div class="case-study-header">
+            <div>
+              <div class="tag-list" style="margin-bottom: 0.6rem;">
+                <span class="tag tag-emerald">Geo AI</span>
+                <span class="tag">G5</span>
+                <span class="status-badge status-building">building</span>
+              </div>
+              <h2>Drilling Bayesian Optimization</h2>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Gaussian Processes</span>
+              <span class="tag">BoTorch / GPyTorch</span>
+              <span class="tag">Hugging Face Space</span>
+            </div>
+          </div>
+
+          <div class="case-grid">
+            <div class="case-block">
+              <h4>Problem</h4>
+              <p>Exploratory drilling is expensive and irreversible. Static grid drilling wastes meters in low-information zones.</p>
+            </div>
+            <div class="case-block">
+              <h4>Data</h4>
+              <p>Synthetic 2D/3D anisotropic ore-grade fields and historical borehole assay distributions with realistic spatial correlation, followed by field data.</p>
+            </div>
+            <div class="case-block">
+              <h4>Method</h4>
+              <p>Gaussian Process surrogate modeling with Matérn kernels and Upper Confidence Bound (UCB) / Expected Improvement acquisition.</p>
+            </div>
+            <div class="case-block">
+              <h4>Hardware / Runtime</h4>
+              <p>Lightweight CPU/edge-capable inference deployed as an interactive simulation on Hugging Face Spaces.</p>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <span class="tag">Hugging Face Space: [URL]</span>
+            <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Repository</a>
+          </div>
+        </article>
+
+        <!-- G2, G3, G4 Planned Geo AI -->
+        <div class="grid-3" style="margin-bottom: 2rem;">
+          <article class="card" id="deposits-llm" data-domain="geo">
+            <div class="tag-list">
+              <span class="tag">G2</span>
+              <span class="status-badge status-planned">planned</span>
+            </div>
+            <h3>Bulgarian Mineral Deposits from Literature</h3>
+            <p>Extracting structured deposit data from decades of Bulgarian geological literature with LLMs.</p>
+          </article>
+
+          <article class="card" id="pxrf-icp" data-domain="geo">
+            <div class="tag-list">
+              <span class="tag">G3</span>
+              <span class="status-badge status-planned">planned</span>
+            </div>
+            <h3>Cheap vs. Accurate: pXRF → ICP</h3>
+            <p>Learning to correct handheld XRF toward accredited ICP-OES assays, with uncertainty.</p>
+          </article>
+
+          <article class="card" id="automated-mineralogy" data-domain="geo">
+            <div class="tag-list">
+              <span class="tag">G4</span>
+              <span class="status-badge status-planned">planned</span>
+            </div>
+            <h3>Low-Cost Automated Mineralogy</h3>
+            <p>Mineral segmentation from SEM-BSE/EDS images, validated with X-ray diffraction.</p>
+          </article>
+        </div>
+
+        <!-- B1: Bridge Project -->
         <article class="case-study" id="drone-mag" data-domain="bridge">
           <div class="case-study-header">
             <div>
               <div class="tag-list" style="margin-bottom: 0.6rem;">
                 <span class="tag tag-cyan">Bridge Project</span>
-                <span class="tag tag-emerald">Roadmap</span>
+                <span class="tag">B1</span>
+                <span class="status-badge status-planned">planned</span>
               </div>
-              <h2>Drone Magnetometer Prototype with On-Device Processing</h2>
+              <h2>Edge-AI Drone Magnetometry</h2>
             </div>
             <div class="tag-list">
               <span class="tag">Magnetometry</span>
-              <span class="tag">Edge Filtering</span>
+              <span class="tag">Open Hardware</span>
               <span class="tag">Dual-Use</span>
             </div>
           </div>
           <p style="color: var(--text-secondary);">
-            Upcoming hardware-in-the-loop prototype uniting both domains: a UAV-borne magnetometer payload with synchronized IMU/GNSS logging and real-time on-device anomaly detection—applicable to both mineral exploration and UXO surveying.
+            Open hardware magnetometer payload with on-board anomaly detection — one stack, two missions (mineral exploration and UXO surveying).
           </p>
         </article>
       </div>
@@ -255,10 +298,8 @@
       </div>
       <div class="footer-links">
         <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a>
-        <a href="contact.html">LinkedIn</a>
-        <a href="contact.html">Hugging Face</a>
-        <a href="contact.html">ORCID</a>
-        <a href="mailto:nikidimitrow@gmail.com">Email</a>
+        <a href="feed.xml">RSS</a>
+        <span class="obf-email" data-u="nikidimitrow" data-d="gmail.com" data-label="Email"><noscript>&#110;&#105;&#107;&#105;&#100;&#105;&#109;&#105;&#116;&#114;&#111;&#119;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</noscript></span>
       </div>
     </div>
   </footer>
