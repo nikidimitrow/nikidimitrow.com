@@ -24,6 +24,10 @@
   <link rel="alternate" type="application/atom+xml" title="Notes — Nikolay Dimitrow" href="feed.xml">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#090d12" media="(prefers-color-scheme: dark)">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <link rel="stylesheet" href="assets/css/main.css">
   <script type="application/ld+json">
   {
@@ -82,9 +86,12 @@
             <li><a href="contact.html" class="nav-cta">Contact</a></li>
           </ul>
         </nav>
+        <div class="nav-utilities">
+          <button type="button" class="theme-toggle" aria-label="Theme: auto" title="Theme: auto" data-mode="auto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg><span class="theme-toggle-label">Auto</span></button>
         <div class="lang-switch" aria-label="Language switcher">
           <a href="index.html" class="active" aria-current="true">EN</a>
           <a href="bg/index.html" lang="bg">BG</a>
+        </div>
         </div>
       </div>
     </div>
@@ -141,32 +148,32 @@
               <title id="stack-title-en">One stack, two missions signal flow</title>
               <desc id="stack-desc-en">Sensors feed Edge compute, which runs On-device anomaly detection and branches into Mission A: Mineral exploration and Mission B: UXO and hazard detection.</desc>
 
-              <rect x="2" y="54" width="210" height="72" rx="8" fill="#131b26" stroke="#2b3c54" stroke-width="1.5"/>
-              <text x="107" y="85" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Sensors</text>
-              <text x="107" y="106" fill="#8b9cb2" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Magnetometry · GPR</text>
+              <rect x="2" y="54" width="210" height="72" rx="8" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
+              <text x="107" y="85" fill="var(--text)" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Sensors</text>
+              <text x="107" y="106" fill="var(--text-muted)" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Magnetometry · GPR</text>
 
-              <line x1="212" y1="90" x2="256" y2="90" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+              <line x1="212" y1="90" x2="256" y2="90" stroke="var(--accent)" stroke-width="1.5" class="svg-flow-dash"/>
 
-              <rect x="256" y="54" width="210" height="72" rx="8" fill="#131b26" stroke="#2b3c54" stroke-width="1.5"/>
-              <text x="361" y="85" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Edge compute</text>
-              <text x="361" y="106" fill="#8b9cb2" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Jetson Orin / MCU</text>
+              <rect x="256" y="54" width="210" height="72" rx="8" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
+              <text x="361" y="85" fill="var(--text)" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Edge compute</text>
+              <text x="361" y="106" fill="var(--text-muted)" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Jetson Orin / MCU</text>
 
-              <line x1="466" y1="90" x2="510" y2="90" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+              <line x1="466" y1="90" x2="510" y2="90" stroke="var(--accent)" stroke-width="1.5" class="svg-flow-dash"/>
 
-              <rect x="510" y="54" width="200" height="72" rx="8" fill="#131b26" stroke="#f59e0b" stroke-width="1.5"/>
-              <text x="610" y="85" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">On-device</text>
-              <text x="610" y="106" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">anomaly detection</text>
+              <rect x="510" y="54" width="200" height="72" rx="8" fill="var(--surface)" stroke="var(--domain-data)" stroke-width="1.5"/>
+              <text x="610" y="85" fill="var(--text)" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">On-device</text>
+              <text x="610" y="106" fill="var(--domain-data)" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">anomaly detection</text>
 
-              <path d="M 710 90 L 740 90 L 740 42 L 770 42" fill="none" stroke="#10b981" stroke-width="1.5" class="svg-flow-dash"/>
-              <path d="M 710 90 L 740 90 L 740 138 L 770 138" fill="none" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+              <path d="M 710 90 L 740 90 L 740 42 L 770 42" fill="none" stroke="var(--domain-geo)" stroke-width="1.5" class="svg-flow-dash"/>
+              <path d="M 710 90 L 740 90 L 740 138 L 770 138" fill="none" stroke="var(--accent)" stroke-width="1.5" class="svg-flow-dash"/>
 
-              <rect x="770" y="10" width="208" height="64" rx="8" fill="#131b26" stroke="#10b981" stroke-width="1.5"/>
-              <text x="874" y="37" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission A</text>
-              <text x="874" y="56" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mineral exploration</text>
+              <rect x="770" y="10" width="208" height="64" rx="8" fill="var(--surface)" stroke="var(--domain-geo)" stroke-width="1.5"/>
+              <text x="874" y="37" fill="var(--domain-geo)" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission A</text>
+              <text x="874" y="56" fill="var(--text)" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mineral exploration</text>
 
-              <rect x="770" y="106" width="208" height="64" rx="8" fill="#131b26" stroke="#38bdf8" stroke-width="1.5"/>
-              <text x="874" y="133" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission B</text>
-              <text x="874" y="152" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">UXO &amp; hazard detection</text>
+              <rect x="770" y="106" width="208" height="64" rx="8" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/>
+              <text x="874" y="133" fill="var(--accent)" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission B</text>
+              <text x="874" y="152" fill="var(--text)" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">UXO &amp; hazard detection</text>
             </svg>
 
             <!-- Vertical Mobile SVG -->
@@ -174,27 +181,27 @@
               <title id="stack-m-title-en">One stack, two missions signal flow</title>
               <desc id="stack-m-desc-en">Sensors feed Edge compute, which runs On-device anomaly detection and branches into Mission A: Mineral exploration and Mission B: UXO and hazard detection.</desc>
 
-              <rect x="20" y="10" width="300" height="64" rx="8" fill="#131b26" stroke="#2b3c54" stroke-width="1.5"/>
-              <text x="170" y="38" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Sensors (Magnetometry · GPR)</text>
-              <line x1="170" y1="74" x2="170" y2="104" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+              <rect x="20" y="10" width="300" height="64" rx="8" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
+              <text x="170" y="38" fill="var(--text)" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Sensors (Magnetometry · GPR)</text>
+              <line x1="170" y1="74" x2="170" y2="104" stroke="var(--accent)" stroke-width="1.5" class="svg-flow-dash"/>
 
-              <rect x="20" y="104" width="300" height="64" rx="8" fill="#131b26" stroke="#2b3c54" stroke-width="1.5"/>
-              <text x="170" y="132" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Edge compute (Jetson Orin / MCU)</text>
-              <line x1="170" y1="168" x2="170" y2="198" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+              <rect x="20" y="104" width="300" height="64" rx="8" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
+              <text x="170" y="132" fill="var(--text)" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Edge compute (Jetson Orin / MCU)</text>
+              <line x1="170" y1="168" x2="170" y2="198" stroke="var(--accent)" stroke-width="1.5" class="svg-flow-dash"/>
 
-              <rect x="20" y="198" width="300" height="64" rx="8" fill="#131b26" stroke="#f59e0b" stroke-width="1.5"/>
-              <text x="170" y="235" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">On-device anomaly detection</text>
+              <rect x="20" y="198" width="300" height="64" rx="8" fill="var(--surface)" stroke="var(--domain-data)" stroke-width="1.5"/>
+              <text x="170" y="235" fill="var(--domain-data)" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">On-device anomaly detection</text>
 
-              <path d="M 170 262 L 170 292 L 85 292 L 85 322" fill="none" stroke="#10b981" stroke-width="1.5" class="svg-flow-dash"/>
-              <path d="M 170 262 L 170 292 L 255 292 L 255 322" fill="none" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+              <path d="M 170 262 L 170 292 L 85 292 L 85 322" fill="none" stroke="var(--domain-geo)" stroke-width="1.5" class="svg-flow-dash"/>
+              <path d="M 170 262 L 170 292 L 255 292 L 255 322" fill="none" stroke="var(--accent)" stroke-width="1.5" class="svg-flow-dash"/>
 
-              <rect x="10" y="322" width="150" height="76" rx="8" fill="#131b26" stroke="#10b981" stroke-width="1.5"/>
-              <text x="85" y="352" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission A</text>
-              <text x="85" y="374" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Mineral exploration</text>
+              <rect x="10" y="322" width="150" height="76" rx="8" fill="var(--surface)" stroke="var(--domain-geo)" stroke-width="1.5"/>
+              <text x="85" y="352" fill="var(--domain-geo)" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission A</text>
+              <text x="85" y="374" fill="var(--text)" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Mineral exploration</text>
 
-              <rect x="180" y="322" width="150" height="76" rx="8" fill="#131b26" stroke="#38bdf8" stroke-width="1.5"/>
-              <text x="255" y="352" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission B</text>
-              <text x="255" y="374" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">UXO detection</text>
+              <rect x="180" y="322" width="150" height="76" rx="8" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/>
+              <text x="255" y="352" fill="var(--accent)" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission B</text>
+              <text x="255" y="374" fill="var(--text)" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">UXO detection</text>
             </svg>
           </div>
 
@@ -263,7 +270,7 @@
           <article class="card">
             <div class="card-thumb" aria-hidden="true">
               <svg viewBox="0 0 320 180">
-                <g stroke="#38bdf8" stroke-opacity="0.22" stroke-width="1" fill="none">
+                <g stroke="var(--accent)" stroke-opacity="0.22" stroke-width="1" fill="none">
                   <line x1="0" y1="45" x2="320" y2="45"/>
                   <line x1="0" y1="90" x2="320" y2="90"/>
                   <line x1="0" y1="135" x2="320" y2="135"/>
@@ -294,14 +301,14 @@
           <article class="card">
             <div class="card-thumb" aria-hidden="true">
               <svg viewBox="0 0 320 180">
-                <g stroke="#10b981" stroke-opacity="0.35" stroke-width="1.2" fill="none">
+                <g stroke="var(--domain-geo)" stroke-opacity="0.35" stroke-width="1.2" fill="none">
                   <ellipse cx="160" cy="90" rx="120" ry="68"/>
                   <ellipse cx="168" cy="86" rx="88" ry="48"/>
                   <ellipse cx="174" cy="82" rx="56" ry="30"/>
                   <ellipse cx="178" cy="80" rx="24" ry="13"/>
-                  <circle cx="178" cy="80" r="3" fill="#10b981"/>
-                  <circle cx="110" cy="112" r="2.5" fill="#10b981"/>
-                  <circle cx="215" cy="58" r="2.5" fill="#10b981"/>
+                  <circle cx="178" cy="80" r="3" fill="var(--domain-geo)"/>
+                  <circle cx="110" cy="112" r="2.5" fill="var(--domain-geo)"/>
+                  <circle cx="215" cy="58" r="2.5" fill="var(--domain-geo)"/>
                 </g>
               </svg>
             </div>
@@ -322,7 +329,7 @@
           <article class="card">
             <div class="card-thumb" aria-hidden="true">
               <svg viewBox="0 0 320 180">
-                <g stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1.2" fill="none">
+                <g stroke="var(--domain-data)" stroke-opacity="0.35" stroke-width="1.2" fill="none">
                   <path d="M20 130 Q 90 95, 160 115 T 300 90"/>
                   <path d="M20 95 Q 100 60, 175 82 T 300 60"/>
                   <path d="M20 60 Q 110 30, 190 48 T 300 32"/>

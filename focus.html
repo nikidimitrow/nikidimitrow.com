@@ -23,6 +23,10 @@
   <meta name="twitter:image" content="https://nikidimitrow.com/assets/images/og-en.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#090d12" media="(prefers-color-scheme: dark)">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -49,9 +53,12 @@
             <li><a href="contact.html" class="nav-cta">Contact</a></li>
           </ul>
         </nav>
+        <div class="nav-utilities">
+          <button type="button" class="theme-toggle" aria-label="Theme: auto" title="Theme: auto" data-mode="auto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg><span class="theme-toggle-label">Auto</span></button>
         <div class="lang-switch" aria-label="Language switcher">
           <a href="focus.html" class="active" aria-current="true">EN</a>
           <a href="bg/focus.html" lang="bg">BG</a>
+        </div>
         </div>
       </div>
     </div>
