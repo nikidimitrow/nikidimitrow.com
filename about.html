@@ -9,15 +9,20 @@
   <link rel="alternate" hreflang="en" href="https://nikidimitrow.com/about.html">
   <link rel="alternate" hreflang="bg" href="https://nikidimitrow.com/bg/about.html">
   <link rel="alternate" hreflang="x-default" href="https://nikidimitrow.com/about.html">
+  <link rel="preload" href="assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:type" content="profile">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="bg_BG">
   <meta property="og:title" content="About — Nikolay Dimitrow">
   <meta property="og:description" content="Principal Software and Systems Architect based in Sofia, Bulgaria. Safety-critical embedded systems, Geo AI, and dual-use edge AI.">
   <meta property="og:url" content="https://nikidimitrow.com/about.html">
-  <meta property="og:image" content="https://nikidimitrow.com/assets/images/logo.png">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://nikidimitrow.com/assets/images/og-en.png">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About — Nikolay Dimitrow">
   <meta name="twitter:description" content="Principal Software and Systems Architect based in Sofia, Bulgaria.">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <meta name="twitter:image" content="https://nikidimitrow.com/assets/images/og-en.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/main.css">
   <script type="application/ld+json">
   {
@@ -32,6 +37,18 @@
       "addressLocality": "Sofia",
       "addressCountry": "BG"
     },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Mining and Geology \"St. Ivan Rilski\""
+    },
+    "knowsAbout": [
+      "Edge AI",
+      "Geo AI",
+      "Bayesian optimization",
+      "ISO 26262",
+      "functional safety",
+      "embedded systems"
+    ],
     "sameAs": [
       "https://github.com/nikidimitrow"
     ]
@@ -39,51 +56,55 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-        <img src="assets/images/logo.png" alt="Nikolay Dimitrow logo" class="brand-logo">
-        <div class="brand-text">
-          <span class="brand-name">Nikolay Dimitrow</span>
-          <span class="brand-role">Edge AI · Safety-Critical</span>
-        </div>
+        <picture>
+          <source srcset="assets/images/logo-76.webp" type="image/webp">
+          <img src="assets/images/logo-76.png" width="38" height="38" alt="Nikolay Dimitrow logo" class="brand-logo">
+        </picture>
+        <span class="brand-name">Nikolay <span class="brand-last">Dimitrow</span></span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
-      <div class="nav-wrapper">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="focus.html">Focus</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="notes.html">Notes</a></li>
-          <li><a href="lab.html">Lab</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="consulting.html">Consulting</a></li>
-          <li><a href="now.html">Now</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="lang-switch">
-          <a href="about.html" class="active">EN</a>
-          <a href="bg/about.html">BG</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">Menu</button>
+      <div id="site-nav" class="nav-wrapper">
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switch" aria-label="Language switcher">
+          <a href="about.html" class="active" aria-current="true">EN</a>
+          <a href="bg/about.html" lang="bg">BG</a>
         </div>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="section">
       <div class="container">
         <article class="post-article">
           <div class="eyebrow">Profile</div>
           <h1>About</h1>
 
-          <p class="lead" style="margin-top: 1rem;">
-            I'm Nikolay (Niki) Dimitrow, a Principal Software and Systems Architect based in Sofia, Bulgaria.
-          </p>
-
-          <p>
-            For 15+ years I have built safety-critical embedded systems for the automotive industry: cockpit domain controllers, hypervisor architectures, QNX, Android Automotive, Adaptive AUTOSAR and multi-supplier integration under ISO 26262. I also work close to the metal: CPU microarchitecture, RTL, and formal verification with Yosys, SymbiYosys, Verilator and cocotb.
-          </p>
+          <div class="about-intro mt-2">
+            <!-- TODO(niki): portrait 800x800 -> <img src="assets/images/portrait.webp" width="120" height="120" alt="Nikolay Dimitrow" class="about-portrait"> -->
+            <div>
+              <p class="lead">
+                I'm Nikolay (Niki) Dimitrow, a Principal Software and Systems Architect based in Sofia, Bulgaria.
+              </p>
+              <p class="mt-1">
+                For 15+ years I have built safety-critical embedded systems for the automotive industry: cockpit domain controllers, hypervisor architectures, QNX, Android Automotive, Adaptive AUTOSAR and multi-supplier integration under ISO 26262. I also work close to the metal: CPU microarchitecture, RTL, and formal verification with Yosys, SymbiYosys, Verilator and cocotb.
+              </p>
+            </div>
+          </div>
 
           <h2>Why Geo AI</h2>
           <p>
@@ -99,26 +120,56 @@
           </p>
 
           <h2>How I work</h2>
-          <ul class="clean-list" style="margin-top: 1rem;">
-            <li><strong>In public.</strong> Datasets on Hugging Face, code on GitHub, preprints on arXiv.</li>
-            <li><strong>On real hardware.</strong> Every model is measured where it will run.</li>
-            <li><strong>With safety discipline.</strong> Requirements, failure modes and evidence, not just accuracy.</li>
-          </ul>
+          <div class="grid-3 mt-2">
+            <div class="card">
+              <h3>In public</h3>
+              <p>Datasets on Hugging Face, code on GitHub, preprints on arXiv.</p>
+            </div>
+            <div class="card">
+              <h3>On real hardware</h3>
+              <p>Every model is measured where it will run.</p>
+            </div>
+            <div class="card">
+              <h3>With safety discipline</h3>
+              <p>Requirements, failure modes and evidence, not just accuracy.</p>
+            </div>
+          </div>
+
+          <div class="about-links">
+            <a href="lab.html" class="btn-link">Hardware bench →</a>
+            <a href="now.html" class="btn-link">What I'm doing now →</a>
+          </div>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-meta">
-        <strong>Nikolay Dimitrow</strong> · Safety-Critical Edge AI &amp; Field Sensing<br>
-        <span>Open to vetted defense &amp; dual-use collaborations.</span>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-meta">
+          <strong>Nikolay Dimitrow</strong> · Safety-Critical Edge AI &amp; Field Sensing<br>
+          <span>Open to vetted defense &amp; dual-use collaborations.</span>
+          <p class="footer-copyright">© 2026 Nikolay Dimitrow</p>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a>
-        <a href="feed.xml">RSS</a>
-        <span class="obf-email" data-u="nikidimitrow" data-d="gmail.com" data-label="Email"><noscript>&#110;&#105;&#107;&#105;&#100;&#105;&#109;&#105;&#116;&#114;&#111;&#119;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</noscript></span>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul class="footer-nav-list">
+          <li><a href="focus.html">Focus</a></li>
+          <li><a href="lab.html">Lab</a></li>
+          <li><a href="now.html">Now</a></li>
+          <li><a href="feed.xml">Notes RSS</a></li>
+          <li><a href="bg/about.html" lang="bg">Български (BG)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Profiles</h4>
+        <ul class="footer-nav-list">
+          <li><a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a></li>
+          <!-- TODO(niki): add LinkedIn, Hugging Face, ORCID links when available -->
+          <li><span class="obf-email" data-u="nikidimitrow" data-d="gmail.com" data-label="Email"><noscript>&#110;&#105;&#107;&#105;&#100;&#105;&#109;&#105;&#116;&#114;&#111;&#119;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</noscript></span></li>
+        </ul>
       </div>
     </div>
   </footer>

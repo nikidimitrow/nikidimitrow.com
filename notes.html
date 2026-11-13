@@ -9,51 +9,56 @@
   <link rel="alternate" hreflang="en" href="https://nikidimitrow.com/notes.html">
   <link rel="alternate" hreflang="bg" href="https://nikidimitrow.com/bg/notes.html">
   <link rel="alternate" hreflang="x-default" href="https://nikidimitrow.com/notes.html">
+  <link rel="preload" href="assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="bg_BG">
   <meta property="og:title" content="Notes — Nikolay Dimitrow">
   <meta property="og:description" content="Cheap Information, Build Log, Edge AI Field Notes, and Safety-Critical AI.">
   <meta property="og:url" content="https://nikidimitrow.com/notes.html">
-  <meta property="og:image" content="https://nikidimitrow.com/assets/images/logo.png">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://nikidimitrow.com/assets/images/og-en.png">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Notes — Nikolay Dimitrow">
   <meta name="twitter:description" content="Cheap Information, Build Log, Edge AI Field Notes, and Safety-Critical AI.">
+  <meta name="twitter:image" content="https://nikidimitrow.com/assets/images/og-en.png">
   <link rel="alternate" type="application/atom+xml" title="Notes — Nikolay Dimitrow" href="feed.xml">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-        <img src="assets/images/logo.png" alt="Nikolay Dimitrow logo" class="brand-logo">
-        <div class="brand-text">
-          <span class="brand-name">Nikolay Dimitrow</span>
-          <span class="brand-role">Edge AI · Safety-Critical</span>
-        </div>
+        <picture>
+          <source srcset="assets/images/logo-76.webp" type="image/webp">
+          <img src="assets/images/logo-76.png" width="38" height="38" alt="Nikolay Dimitrow logo" class="brand-logo">
+        </picture>
+        <span class="brand-name">Nikolay <span class="brand-last">Dimitrow</span></span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
-      <div class="nav-wrapper">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="focus.html">Focus</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="notes.html" class="active">Notes</a></li>
-          <li><a href="lab.html">Lab</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="consulting.html">Consulting</a></li>
-          <li><a href="now.html">Now</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="lang-switch">
-          <a href="notes.html" class="active">EN</a>
-          <a href="bg/notes.html">BG</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">Menu</button>
+      <div id="site-nav" class="nav-wrapper">
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="notes.html" aria-current="page">Notes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switch" aria-label="Language switcher">
+          <a href="notes.html" class="active" aria-current="true">EN</a>
+          <a href="bg/notes.html" lang="bg">BG</a>
         </div>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="section">
       <div class="container">
         <div class="section-header">
@@ -64,99 +69,85 @@
           </p>
         </div>
 
-        <div class="hero-actions" style="margin-bottom: 2.5rem;">
-          <button class="btn btn-primary" data-series-filter="all">All Series</button>
-          <button class="btn btn-secondary" data-series-filter="cheap-information">Cheap Information</button>
-          <button class="btn btn-secondary" data-series-filter="build-log">Build Log</button>
-          <button class="btn btn-secondary" data-series-filter="edge-ai-field-notes">Edge AI Field Notes</button>
-          <button class="btn btn-secondary" data-series-filter="safety-critical-ai">Safety-Critical AI</button>
+        <div class="hero-actions mb-3" role="group" aria-label="Filter notes by series">
+          <button class="btn btn-primary" data-series-filter="all" aria-pressed="true">All Series</button>
+          <button class="btn btn-secondary" data-series-filter="cheap-information" aria-pressed="false">Cheap Information</button>
+          <button class="btn btn-secondary" data-series-filter="build-log" aria-pressed="false">Build Log</button>
+          <button class="btn btn-secondary" data-series-filter="edge-ai-field-notes" aria-pressed="false">Edge AI Field Notes</button>
+          <button class="btn btn-secondary" data-series-filter="safety-critical-ai" aria-pressed="false">Safety-Critical AI</button>
         </div>
 
-        <div class="grid-2">
-          <article class="card" data-series="cheap-information">
-            <div class="tag-list">
+        <div class="draft-list">
+          <div class="draft-row" data-series="cheap-information">
+            <span class="draft-row-title">What should we measure next? A systems architect's road into Geo AI</span>
+            <div class="draft-row-meta">
               <span class="tag tag-emerald">Cheap Information</span>
-              <span class="tag tag-amber">DRAFT</span>
+              <span class="status-badge status-planned">draft</span>
             </div>
-            <h3>What should we measure next? A systems architect's road into Geo AI</h3>
-            <p>
-              Why geological exploration is a sequential decision problem under uncertainty, and how value-of-information thinking bridges automotive safety engineering and subsurface sensing.
-            </p>
-            <div class="card-footer">
-              <span class="tag">Coming soon · Draft</span>
-            </div>
-          </article>
+          </div>
 
-          <article class="card" data-series="cheap-information">
-            <div class="tag-list">
+          <div class="draft-row" data-series="cheap-information">
+            <span class="draft-row-title">Kriging is a Gaussian process: the bridge between geostatistics and ML</span>
+            <div class="draft-row-meta">
               <span class="tag tag-emerald">Cheap Information</span>
-              <span class="tag tag-amber">DRAFT</span>
+              <span class="status-badge status-planned">draft</span>
             </div>
-            <h3>Kriging is a Gaussian process: the bridge between geostatistics and ML</h3>
-            <p>
-              Deriving the mathematical equivalence between classical ordinary/universal kriging and Gaussian Process regression, and what it unlocks for multi-fidelity sampling.
-            </p>
-            <div class="card-footer">
-              <span class="tag">Coming soon · Draft</span>
-            </div>
-          </article>
+          </div>
 
-          <article class="card" data-series="build-log">
-            <div class="tag-list">
-              <span class="tag tag-cyan">Build Log</span>
-              <span class="tag tag-amber">DRAFT</span>
+          <div class="draft-row" data-series="build-log">
+            <span class="draft-row-title">Mining a library: extracting Bulgarian mineral deposits with LLMs</span>
+            <div class="draft-row-meta">
+              <span class="tag tag-amber">Build Log</span>
+              <span class="status-badge status-planned">draft</span>
             </div>
-            <h3>Mining a library: extracting Bulgarian mineral deposits with LLMs</h3>
-            <p>
-              Field notes from building an extraction and validation pipeline over decades of Bulgarian geological literature, handling legacy terminology, coordinates, and schema checks.
-            </p>
-            <div class="card-footer">
-              <span class="tag">Coming soon · Draft</span>
-            </div>
-          </article>
+          </div>
 
-          <article class="card" data-series="edge-ai-field-notes">
-            <div class="tag-list">
+          <div class="draft-row" data-series="edge-ai-field-notes">
+            <span class="draft-row-title">INT8 on Jetson Orin Nano: VisDrone latency vs. accuracy</span>
+            <div class="draft-row-meta">
               <span class="tag tag-cyan">Edge AI Field Notes</span>
-              <span class="tag tag-amber">DRAFT</span>
+              <span class="status-badge status-planned">draft</span>
             </div>
-            <h3>INT8 on Jetson Orin Nano: VisDrone latency vs. accuracy</h3>
-            <p>
-              Measuring TensorRT INT8 calibration trade-offs on small aerial targets across 7W and 15W power modes, including thermal throttling and real power-rail telemetry.
-            </p>
-            <div class="card-footer">
-              <span class="tag">Coming soon · Draft</span>
-            </div>
-          </article>
+          </div>
 
-          <article class="card" data-series="safety-critical-ai">
-            <div class="tag-list">
+          <div class="draft-row" data-series="safety-critical-ai">
+            <span class="draft-row-title">From ISO 26262 to AI in the field: what safety engineers know that ML engineers don't</span>
+            <div class="draft-row-meta">
               <span class="tag">Safety-Critical AI</span>
-              <span class="tag tag-amber">DRAFT</span>
+              <span class="status-badge status-planned">draft</span>
             </div>
-            <h3>From ISO 26262 to AI in the field: what safety engineers know that ML engineers don't</h3>
-            <p>
-              Why accuracy metrics are not safety evidence, and how domain isolation, runtime monitors, and failure-mode analysis apply when deploying models on real hardware.
-            </p>
-            <div class="card-footer">
-              <span class="tag">Coming soon · Draft</span>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-meta">
-        <strong>Nikolay Dimitrow</strong> · Safety-Critical Edge AI &amp; Field Sensing<br>
-        <span>Open to vetted defense &amp; dual-use collaborations.</span>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-meta">
+          <strong>Nikolay Dimitrow</strong> · Safety-Critical Edge AI &amp; Field Sensing<br>
+          <span>Open to vetted defense &amp; dual-use collaborations.</span>
+          <p class="footer-copyright">© 2026 Nikolay Dimitrow</p>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a>
-        <a href="feed.xml">RSS</a>
-        <span class="obf-email" data-u="nikidimitrow" data-d="gmail.com" data-label="Email"><noscript>&#110;&#105;&#107;&#105;&#100;&#105;&#109;&#105;&#116;&#114;&#111;&#119;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</noscript></span>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul class="footer-nav-list">
+          <li><a href="focus.html">Focus</a></li>
+          <li><a href="lab.html">Lab</a></li>
+          <li><a href="now.html">Now</a></li>
+          <li><a href="feed.xml">Notes RSS</a></li>
+          <li><a href="bg/notes.html" lang="bg">Български (BG)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Profiles</h4>
+        <ul class="footer-nav-list">
+          <li><a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a></li>
+          <!-- TODO(niki): add LinkedIn, Hugging Face, ORCID links when available -->
+          <li><span class="obf-email" data-u="nikidimitrow" data-d="gmail.com" data-label="Email"><noscript>&#110;&#105;&#107;&#105;&#100;&#105;&#109;&#105;&#116;&#114;&#111;&#119;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</noscript></span></li>
+        </ul>
       </div>
     </div>
   </footer>
