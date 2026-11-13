@@ -9,16 +9,21 @@
   <link rel="alternate" hreflang="en" href="https://nikidimitrow.com/">
   <link rel="alternate" hreflang="bg" href="https://nikidimitrow.com/bg/">
   <link rel="alternate" hreflang="x-default" href="https://nikidimitrow.com/">
+  <link rel="preload" href="assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="bg_BG">
   <meta property="og:title" content="Nikolay Dimitrow — Edge AI for Field Sensing">
   <meta property="og:description" content="Cheap measurements. Confident decisions. Safety-critical systems architect building AI that runs on the sensor, not in the cloud.">
   <meta property="og:url" content="https://nikidimitrow.com/">
-  <meta property="og:image" content="https://nikidimitrow.com/assets/images/logo.png">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://nikidimitrow.com/assets/images/og-en.png">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nikolay Dimitrow — Edge AI for Field Sensing">
   <meta name="twitter:description" content="Cheap measurements. Confident decisions. Safety-critical systems architect building AI that runs on the sensor.">
+  <meta name="twitter:image" content="https://nikidimitrow.com/assets/images/og-en.png">
   <link rel="alternate" type="application/atom+xml" title="Notes — Nikolay Dimitrow" href="feed.xml">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/main.css">
   <script type="application/ld+json">
   {
@@ -33,6 +38,18 @@
       "addressLocality": "Sofia",
       "addressCountry": "BG"
     },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Mining and Geology \"St. Ivan Rilski\""
+    },
+    "knowsAbout": [
+      "Edge AI",
+      "Geo AI",
+      "Bayesian optimization",
+      "ISO 26262",
+      "functional safety",
+      "embedded systems"
+    ],
     "sameAs": [
       "https://github.com/nikidimitrow"
     ]
@@ -40,43 +57,43 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="assets/images/logo.png" alt="Nikolay Dimitrow logo" class="brand-logo">
-        <div class="brand-text">
-          <span class="brand-name">Nikolay Dimitrow</span>
-          <span class="brand-role">Edge AI · Safety-Critical</span>
-        </div>
+      <a href="index.html" class="brand" aria-current="page">
+        <picture>
+          <source srcset="assets/images/logo-76.webp" type="image/webp">
+          <img src="assets/images/logo-76.png" width="38" height="38" alt="Nikolay Dimitrow logo" class="brand-logo">
+        </picture>
+        <span class="brand-name">Nikolay <span class="brand-last">Dimitrow</span></span>
       </a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">Menu</button>
 
-      <div class="nav-wrapper">
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="focus.html">Focus</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="notes.html">Notes</a></li>
-          <li><a href="lab.html">Lab</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="consulting.html">Consulting</a></li>
-          <li><a href="now.html">Now</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div id="site-nav" class="nav-wrapper">
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+          </ul>
+        </nav>
         <div class="lang-switch" aria-label="Language switcher">
-          <a href="index.html" class="active">EN</a>
-          <a href="bg/index.html">BG</a>
+          <a href="index.html" class="active" aria-current="true">EN</a>
+          <a href="bg/index.html" lang="bg">BG</a>
         </div>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero">
       <div class="container">
-        <div class="eyebrow">Subsurface to Airspace · On-Device Intelligence</div>
+        <div class="eyebrow">Safety-Critical Systems Architect · Sofia</div>
         <h1>Edge AI for field sensing — from subsurface to airspace.</h1>
         <p class="hero-subheadline">Cheap measurements. Confident decisions.</p>
         <p class="lead">
@@ -84,24 +101,106 @@
         </p>
 
         <div class="hero-actions">
-          <a href="projects.html" class="btn btn-primary">Explore Projects</a>
-          <a href="notes.html" class="btn btn-secondary">Read the Notes</a>
-          <a href="consulting.html" class="btn-link">Architecture &amp; Consulting →</a>
+          <a href="projects.html" class="btn btn-primary">Explore projects</a>
+          <a href="consulting.html" class="btn-link">Architecture &amp; consulting →</a>
         </div>
 
-        <div class="trust-bar">
-          <div class="trust-item">
-            <span class="trust-label">15+ Years Safety-Critical</span>
-            <span class="trust-value">Automotive production systems: ISO 26262, QNX, hypervisors</span>
+        <div class="proof-strip">
+          <div class="proof-item">
+            <span class="proof-value">15+ yrs</span>
+            <span class="proof-label">safety-critical automotive</span>
           </div>
-          <div class="trust-item">
-            <span class="trust-label">Verification &amp; Rigor</span>
-            <span class="trust-value">Formal verification, deterministic execution &amp; fault isolation</span>
+          <div class="proof-item">
+            <span class="proof-value">ISO 26262</span>
+            <span class="proof-label">production programs</span>
           </div>
-          <div class="trust-item">
-            <span class="trust-label">Custom Hardware</span>
-            <span class="trust-value">End-to-end sensor acquisition, edge compute &amp; field loggers</span>
+          <div class="proof-item">
+            <span class="proof-value">7</span>
+            <span class="proof-label">open projects</span>
           </div>
+          <div class="proof-item">
+            <span class="proof-value">EN / BG</span>
+            <span class="proof-label">working languages</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="stack-card">
+          <div class="eyebrow">The Convergence Bridge</div>
+          <h2>One stack, two missions</h2>
+          <p class="lead">
+            UAV-mounted magnetometry and ground-penetrating radar (GPR) rely on the exact same sensor physics, synchronization, noise rejection, and on-device anomaly detection whether surveying for mineral deposits or detecting unexploded ordnance (UXO).
+          </p>
+
+          <div class="stack-diagram">
+            <!-- Horizontal Desktop SVG -->
+            <svg class="stack-svg stack-svg-desktop" viewBox="0 0 980 180" role="img" aria-labelledby="stack-title-en stack-desc-en">
+              <title id="stack-title-en">One stack, two missions signal flow</title>
+              <desc id="stack-desc-en">Sensors feed Edge compute, which runs On-device anomaly detection and branches into Mission A: Mineral exploration and Mission B: UXO and hazard detection.</desc>
+
+              <rect x="2" y="54" width="210" height="72" rx="8" fill="#131b26" stroke="#2b3c54" stroke-width="1.5"/>
+              <text x="107" y="85" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Sensors</text>
+              <text x="107" y="106" fill="#8b9cb2" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Magnetometry · GPR</text>
+
+              <line x1="212" y1="90" x2="256" y2="90" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+
+              <rect x="256" y="54" width="210" height="72" rx="8" fill="#131b26" stroke="#2b3c54" stroke-width="1.5"/>
+              <text x="361" y="85" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Edge compute</text>
+              <text x="361" y="106" fill="#8b9cb2" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Jetson Orin / MCU</text>
+
+              <line x1="466" y1="90" x2="510" y2="90" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+
+              <rect x="510" y="54" width="200" height="72" rx="8" fill="#131b26" stroke="#f59e0b" stroke-width="1.5"/>
+              <text x="610" y="85" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">On-device</text>
+              <text x="610" y="106" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">anomaly detection</text>
+
+              <path d="M 710 90 L 740 90 L 740 42 L 770 42" fill="none" stroke="#10b981" stroke-width="1.5" class="svg-flow-dash"/>
+              <path d="M 710 90 L 740 90 L 740 138 L 770 138" fill="none" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+
+              <rect x="770" y="10" width="208" height="64" rx="8" fill="#131b26" stroke="#10b981" stroke-width="1.5"/>
+              <text x="874" y="37" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission A</text>
+              <text x="874" y="56" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mineral exploration</text>
+
+              <rect x="770" y="106" width="208" height="64" rx="8" fill="#131b26" stroke="#38bdf8" stroke-width="1.5"/>
+              <text x="874" y="133" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission B</text>
+              <text x="874" y="152" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">UXO &amp; hazard detection</text>
+            </svg>
+
+            <!-- Vertical Mobile SVG -->
+            <svg class="stack-svg stack-svg-mobile" viewBox="0 0 340 420" role="img" aria-labelledby="stack-m-title-en stack-m-desc-en">
+              <title id="stack-m-title-en">One stack, two missions signal flow</title>
+              <desc id="stack-m-desc-en">Sensors feed Edge compute, which runs On-device anomaly detection and branches into Mission A: Mineral exploration and Mission B: UXO and hazard detection.</desc>
+
+              <rect x="20" y="10" width="300" height="64" rx="8" fill="#131b26" stroke="#2b3c54" stroke-width="1.5"/>
+              <text x="170" y="38" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Sensors (Magnetometry · GPR)</text>
+              <line x1="170" y1="74" x2="170" y2="104" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+
+              <rect x="20" y="104" width="300" height="64" rx="8" fill="#131b26" stroke="#2b3c54" stroke-width="1.5"/>
+              <text x="170" y="132" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">Edge compute (Jetson Orin / MCU)</text>
+              <line x1="170" y1="168" x2="170" y2="198" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+
+              <rect x="20" y="198" width="300" height="64" rx="8" fill="#131b26" stroke="#f59e0b" stroke-width="1.5"/>
+              <text x="170" y="235" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle">On-device anomaly detection</text>
+
+              <path d="M 170 262 L 170 292 L 85 292 L 85 322" fill="none" stroke="#10b981" stroke-width="1.5" class="svg-flow-dash"/>
+              <path d="M 170 262 L 170 292 L 255 292 L 255 322" fill="none" stroke="#38bdf8" stroke-width="1.5" class="svg-flow-dash"/>
+
+              <rect x="10" y="322" width="150" height="76" rx="8" fill="#131b26" stroke="#10b981" stroke-width="1.5"/>
+              <text x="85" y="352" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission A</text>
+              <text x="85" y="374" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Mineral exploration</text>
+
+              <rect x="180" y="322" width="150" height="76" rx="8" fill="#131b26" stroke="#38bdf8" stroke-width="1.5"/>
+              <text x="255" y="352" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Mission B</text>
+              <text x="255" y="374" fill="#f1f5f9" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">UXO detection</text>
+            </svg>
+          </div>
+
+          <p class="stack-key-sentence">
+            The sensor, signal processing and edge AI stay identical — only the target signature changes.
+          </p>
         </div>
       </div>
     </section>
@@ -128,7 +227,7 @@
               Sequential decision-making under geological uncertainty. Bayesian optimization for drill-hole targeting, digitized archival geophysics, and field-ready inference for exploration teams.
             </p>
             <div class="card-footer">
-              <a href="focus.html#geo-ai">Explore Geo AI →</a>
+              <a href="focus.html#geo-ai" class="stretched-link">Explore Geo AI →</a>
             </div>
           </article>
 
@@ -143,7 +242,7 @@
               Low-SWaP aerial perception, INT8 quantized inference on Jetson Orin, multi-sensor fusion, and fault-tolerant embedded architectures designed for safety-critical environments.
             </p>
             <div class="card-footer">
-              <a href="focus.html#dual-use">Explore Dual-Use Edge →</a>
+              <a href="focus.html#dual-use" class="stretched-link">Explore Dual-Use Edge →</a>
             </div>
           </article>
         </div>
@@ -152,67 +251,9 @@
 
     <section class="section">
       <div class="container">
-        <div class="bridge-box">
-          <div>
-            <div class="eyebrow">The Convergence Bridge</div>
-            <h2>Drone Geophysics: One Stack, Two Missions</h2>
-            <p>
-              UAV-mounted magnetometry and ground-penetrating radar (GPR) rely on the exact same sensor physics, synchronization, noise rejection, and on-device anomaly detection whether surveying for <strong>mineral deposits</strong> or detecting <strong>unexploded ordnance (UXO)</strong>.
-            </p>
-            <p>
-              The sensor, signal processing, and edge AI remain identical—only the target signature changes.
-            </p>
-          </div>
-          <div class="bridge-specs">
-            <div class="bridge-spec-row">
-              <span>Modalities</span>
-              <span>Magnetometry / GPR</span>
-            </div>
-            <div class="bridge-spec-row">
-              <span>Compute</span>
-              <span>On-Device (Jetson / MCU)</span>
-            </div>
-            <div class="bridge-spec-row">
-              <span>Mission A</span>
-              <span>Mineral Exploration</span>
-            </div>
-            <div class="bridge-spec-row">
-              <span>Mission B</span>
-              <span>UXO &amp; Hazard Detection</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Roadmap &amp; Active Work</div>
-          <h2>Building in public</h2>
-          <p class="lead">
-            Open datasets, reproducible benchmarks, and hardware prototypes — tracked openly from planned to published.
-          </p>
-        </div>
-
-        <div id="building-in-public-list" class="status-list" aria-live="polite">
-          <noscript>
-            <a href="projects.html" class="status-row">
-              <span class="status-id">ALL</span>
-              <span class="status-title">View all 7 projects (E1, G1–G5, B1)</span>
-              <span class="status-desc">VisDrone INT8, Geofond, Literature LLM, pXRF→ICP, Mineralogy, Drilling BO, Drone Magnetometry.</span>
-              <span class="status-badge status-building">Projects</span>
-            </a>
-          </noscript>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">Selected Work</div>
-          <h2>First Three Projects</h2>
+          <div class="eyebrow">Case studies</div>
+          <h2>Selected work</h2>
           <p class="lead">
             Focused, reproducible work spanning edge vision benchmarks, sequential exploration optimization, and foundational geoscience datasets.
           </p>
@@ -220,47 +261,87 @@
 
         <div class="grid-3">
           <article class="card">
+            <div class="card-thumb" aria-hidden="true">
+              <svg viewBox="0 0 320 180">
+                <g stroke="#38bdf8" stroke-opacity="0.22" stroke-width="1" fill="none">
+                  <line x1="0" y1="45" x2="320" y2="45"/>
+                  <line x1="0" y1="90" x2="320" y2="90"/>
+                  <line x1="0" y1="135" x2="320" y2="135"/>
+                  <line x1="80" y1="0" x2="80" y2="180"/>
+                  <line x1="160" y1="0" x2="160" y2="180"/>
+                  <line x1="240" y1="0" x2="240" y2="180"/>
+                  <rect x="52" y="36" width="56" height="36" stroke-opacity="0.65" stroke-width="1.5"/>
+                  <rect x="148" y="68" width="44" height="28" stroke-opacity="0.65" stroke-width="1.5"/>
+                  <rect x="218" y="48" width="64" height="44" stroke-opacity="0.45" stroke-width="1.5"/>
+                </g>
+              </svg>
+            </div>
             <div class="tag-list">
               <span class="tag tag-cyan">Dual-Use Edge</span>
-              <span class="tag">Jetson Orin Nano</span>
-              <span class="tag">INT8</span>
+              <span class="status-badge status-building">building</span>
             </div>
             <h3>VisDrone INT8 Benchmark</h3>
             <p>
-              Aerial object detection quantized to INT8 via TensorRT on Jetson Orin Nano. Full latency, mAP accuracy, and power-draw profiling under thermal and SWaP budgets.
+              Aerial object detection quantized to INT8 via TensorRT on Jetson Orin Nano under thermal and SWaP budgets.
             </p>
+            <!-- TODO(niki): populate data-metric with measured latency/mAP/power -->
+            <div class="metric-line" data-metric="TODO">latency · mAP@0.5 · W @ 7 W / 15 W</div>
             <div class="card-footer">
-              <a href="projects.html#visdrone">View Case Study →</a>
+              <a href="projects.html#visdrone" class="stretched-link">View case study →</a>
             </div>
           </article>
 
           <article class="card">
+            <div class="card-thumb" aria-hidden="true">
+              <svg viewBox="0 0 320 180">
+                <g stroke="#10b981" stroke-opacity="0.35" stroke-width="1.2" fill="none">
+                  <ellipse cx="160" cy="90" rx="120" ry="68"/>
+                  <ellipse cx="168" cy="86" rx="88" ry="48"/>
+                  <ellipse cx="174" cy="82" rx="56" ry="30"/>
+                  <ellipse cx="178" cy="80" rx="24" ry="13"/>
+                  <circle cx="178" cy="80" r="3" fill="#10b981"/>
+                  <circle cx="110" cy="112" r="2.5" fill="#10b981"/>
+                  <circle cx="215" cy="58" r="2.5" fill="#10b981"/>
+                </g>
+              </svg>
+            </div>
             <div class="tag-list">
               <span class="tag tag-emerald">Geo AI</span>
-              <span class="tag">Bayesian Opt</span>
-              <span class="tag">HF Space</span>
+              <span class="status-badge status-building">building</span>
             </div>
             <h3>Drilling Bayesian Optimization</h3>
             <p>
-              Interactive simulation demonstrating sequential drill-hole placement using Gaussian Processes and acquisition functions to maximize ore-body information per meter drilled.
+              Interactive simulation demonstrating sequential drill-hole placement using Gaussian Processes to maximize information per meter drilled.
             </p>
+            <div class="metric-line">GP surrogate · HF Space demo</div>
             <div class="card-footer">
-              <a href="projects.html#bo-drilling">View Case Study →</a>
+              <a href="projects.html#bo-drilling" class="stretched-link">View case study →</a>
             </div>
           </article>
 
           <article class="card">
+            <div class="card-thumb" aria-hidden="true">
+              <svg viewBox="0 0 320 180">
+                <g stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1.2" fill="none">
+                  <path d="M20 130 Q 90 95, 160 115 T 300 90"/>
+                  <path d="M20 95 Q 100 60, 175 82 T 300 60"/>
+                  <path d="M20 60 Q 110 30, 190 48 T 300 32"/>
+                  <line x1="90" y1="20" x2="90" y2="160" stroke-dasharray="3 3"/>
+                  <line x1="190" y1="20" x2="190" y2="160" stroke-dasharray="3 3"/>
+                </g>
+              </svg>
+            </div>
             <div class="tag-list">
               <span class="tag tag-amber">Data Foundation</span>
-              <span class="tag">Geofond</span>
-              <span class="tag">Hugging Face</span>
+              <span class="status-badge status-building">building</span>
             </div>
             <h3>National Geofond Dataset</h3>
             <p>
-              Digitizing, structuring, and publishing legacy geological archive records into machine-readable formats to solve the data-scarcity bottleneck in regional Geo AI.
+              Digitizing, structuring, and publishing legacy geological archive records into machine-readable formats for regional Geo AI.
             </p>
+            <div class="metric-line">archival logs · Parquet / JSONL</div>
             <div class="card-footer">
-              <a href="projects.html#geofond">View Case Study →</a>
+              <a href="projects.html#geofond" class="stretched-link">View case study →</a>
             </div>
           </article>
         </div>
@@ -270,66 +351,113 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Writing</div>
-          <h2>Latest notes</h2>
+          <div class="eyebrow">Roadmap</div>
+          <h2>Building in public</h2>
           <p class="lead">
-            Drafts in progress across Cheap Information, Build Log, Edge AI Field Notes, and Safety-Critical AI.
+            Open datasets, reproducible benchmarks, and hardware prototypes — tracked openly from planned to published.
           </p>
         </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <div class="tag-list">
-              <span class="tag tag-emerald">Cheap Information</span>
-              <span class="tag">Coming soon</span>
-            </div>
-            <h3>What should we measure next? A systems architect's road into Geo AI</h3>
-            <div class="card-footer">
-              <a href="notes.html">View Notes →</a>
-            </div>
-          </article>
+        <!-- Source of truth: keep in sync with projects.html -->
+        <div class="status-list">
+          <a href="projects.html#visdrone" class="status-row">
+            <span class="status-id">E1</span>
+            <span class="status-title">VisDrone INT8 Benchmark</span>
+            <span class="status-desc">Aerial detection on Jetson Orin Nano: latency, accuracy and power after TensorRT INT8 quantization.</span>
+            <span class="status-badge status-building">building</span>
+          </a>
+          <a href="projects.html#geofond" class="status-row">
+            <span class="status-id">G1</span>
+            <span class="status-title">National Geofond Dataset</span>
+            <span class="status-desc">Digitizing legacy Bulgarian geological archives into machine-readable data.</span>
+            <span class="status-badge status-building">building</span>
+          </a>
+          <a href="projects.html#bo-drilling" class="status-row">
+            <span class="status-id">G5</span>
+            <span class="status-title">Drilling Bayesian Optimization</span>
+            <span class="status-desc">Sequential drill-hole placement with Gaussian processes — HF Space demo, then field data.</span>
+            <span class="status-badge status-building">building</span>
+          </a>
+          <a href="projects.html#deposits-llm" class="status-row">
+            <span class="status-id">G2</span>
+            <span class="status-title">Bulgarian Mineral Deposits from Literature</span>
+            <span class="status-desc">Extracting structured deposit data from decades of Bulgarian geological literature with LLMs.</span>
+            <span class="status-badge status-planned">planned</span>
+          </a>
+          <a href="projects.html#pxrf-icp" class="status-row">
+            <span class="status-id">G3</span>
+            <span class="status-title">Cheap vs. Accurate: pXRF → ICP</span>
+            <span class="status-desc">Learning to correct handheld XRF toward accredited ICP-OES assays, with uncertainty.</span>
+            <span class="status-badge status-planned">planned</span>
+          </a>
+          <a href="projects.html#automated-mineralogy" class="status-row">
+            <span class="status-id">G4</span>
+            <span class="status-title">Low-Cost Automated Mineralogy</span>
+            <span class="status-desc">Mineral segmentation from SEM-BSE/EDS images, validated with X-ray diffraction.</span>
+            <span class="status-badge status-planned">planned</span>
+          </a>
+          <a href="projects.html#drone-mag" class="status-row">
+            <span class="status-id">B1</span>
+            <span class="status-title">Edge-AI Drone Magnetometry</span>
+            <span class="status-desc">Open hardware magnetometer payload with on-board anomaly detection — one stack, two missions.</span>
+            <span class="status-badge status-planned">planned</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-          <article class="card">
-            <div class="tag-list">
-              <span class="tag tag-emerald">Cheap Information</span>
-              <span class="tag">Coming soon</span>
-            </div>
-            <h3>Kriging is a Gaussian process: the bridge between geostatistics and ML</h3>
-            <div class="card-footer">
-              <a href="notes.html">View Notes →</a>
-            </div>
-          </article>
+    <section class="section-tight">
+      <div class="container">
+        <div class="notes-strip">
+          <span>Notes in progress: four series on Cheap Information, Build Log, Edge AI Field Notes, Safety-Critical AI.</span>
+          <a href="feed.xml">Follow via RSS →</a>
+        </div>
+      </div>
+    </section>
 
-          <article class="card">
-            <div class="tag-list">
-              <span class="tag tag-amber">Build Log</span>
-              <span class="tag">Coming soon</span>
-            </div>
-            <h3>Mining a library: extracting Bulgarian mineral deposits with LLMs</h3>
-            <div class="card-footer">
-              <a href="notes.html">View Notes →</a>
-            </div>
-          </article>
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <div class="cta-band-copy">
+            <h2>Working on field sensing, edge AI or exploration under uncertainty? Let's talk.</h2>
+            <p class="cta-band-sub">Independent architecture &amp; safety-critical consulting via dgconsult.</p>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Contact</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-meta">
-        <strong>Nikolay Dimitrow</strong> · Safety-Critical Edge AI &amp; Field Sensing<br>
-        <span>Open to vetted defense &amp; dual-use collaborations.</span>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-meta">
+          <strong>Nikolay Dimitrow</strong> · Safety-Critical Edge AI &amp; Field Sensing<br>
+          <span>Open to vetted defense &amp; dual-use collaborations.</span>
+          <p class="footer-copyright">© 2026 Nikolay Dimitrow</p>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a>
-        <a href="feed.xml">RSS</a>
-        <span class="obf-email" data-u="nikidimitrow" data-d="gmail.com" data-label="Email"><noscript>&#110;&#105;&#107;&#105;&#100;&#105;&#109;&#105;&#116;&#114;&#111;&#119;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</noscript></span>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul class="footer-nav-list">
+          <li><a href="focus.html">Focus</a></li>
+          <li><a href="lab.html">Lab</a></li>
+          <li><a href="now.html">Now</a></li>
+          <li><a href="feed.xml">Notes RSS</a></li>
+          <li><a href="bg/index.html" lang="bg">Български (BG)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Profiles</h4>
+        <ul class="footer-nav-list">
+          <li><a href="https://github.com/nikidimitrow" target="_blank" rel="noopener">GitHub</a></li>
+          <!-- TODO(niki): add LinkedIn, Hugging Face, ORCID links when available -->
+          <li><span class="obf-email" data-u="nikidimitrow" data-d="gmail.com" data-label="Email"><noscript>&#110;&#105;&#107;&#105;&#100;&#105;&#109;&#105;&#116;&#114;&#111;&#119;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</noscript></span></li>
+        </ul>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/projects-data.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
