@@ -1213,7 +1213,11 @@ pre code {
 
   .status-row {
     grid-template-columns: 1fr;
-    gap: 0.4rem;
+    gap: 0.45rem;
+  }
+
+  .status-badge {
+    justify-self: start;
   }
 
   .about-intro {
