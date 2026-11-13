@@ -1,19 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Mobile navigation toggle
+  const isBg = document.documentElement.lang === "bg";
+
+  // Mobile navigation toggle (with aria-controls, Esc, and outside-click close)
   const toggleBtn = document.querySelector(".nav-toggle");
   const navWrapper = document.querySelector(".nav-wrapper");
 
   if (toggleBtn && navWrapper) {
-    toggleBtn.addEventListener("click", () => {
-      const isOpen = navWrapper.classList.toggle("open");
-      toggleBtn.setAttribute("aria-expanded", String(isOpen));
+    const labelOpen = isBg ? "Затвори" : "Close";
+    const labelClosed = isBg ? "Меню" : "Menu";
+
+    const setMenuOpen = (open) => {
+      navWrapper.classList.toggle("open", open);
+      toggleBtn.setAttribute("aria-expanded", String(open));
+      toggleBtn.textContent = open ? labelOpen : labelClosed;
+    };
+
+    toggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setMenuOpen(!navWrapper.classList.contains("open"));
     });
 
     navWrapper.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navWrapper.classList.remove("open");
-        toggleBtn.setAttribute("aria-expanded", "false");
-      });
+      link.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navWrapper.classList.contains("open")) {
+        setMenuOpen(false);
+        toggleBtn.focus();
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (
+        navWrapper.classList.contains("open") &&
+        !navWrapper.contains(e.target) &&
+        !toggleBtn.contains(e.target)
+      ) {
+        setMenuOpen(false);
+      }
     });
   }
 
@@ -29,31 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     el.replaceWith(link);
   });
 
-  // Render "Building in public" list from shared PROJECTS_DATA
-  const bipContainer = document.getElementById("building-in-public-list");
-  if (bipContainer && Array.isArray(window.PROJECTS_DATA)) {
-    const lang = document.documentElement.lang === "bg" ? "bg" : "en";
-    const statusLabels = {
-      en: { building: "building", planned: "planned", published: "published" },
-      bg: { building: "в разработка", planned: "планиран", published: "публикуван" }
-    };
-
-    bipContainer.innerHTML = window.PROJECTS_DATA.map((item) => {
-      const copy = item[lang] || item.en;
-      const href = lang === "bg" ? item.bgAnchor : item.anchor;
-      const badgeLabel = (statusLabels[lang] && statusLabels[lang][item.status]) || item.status;
-      return `
-        <a href="${href}" class="status-row">
-          <span class="status-id">${item.id}</span>
-          <span class="status-title">${copy.title}</span>
-          <span class="status-desc">${copy.oneliner}</span>
-          <span class="status-badge status-${item.status}">${badgeLabel}</span>
-        </a>
-      `;
-    }).join("");
-  }
-
-  // Project domain filter (if present on projects page)
+  // Project domain filter (with aria-pressed)
   const filterBtns = document.querySelectorAll("[data-filter]");
   const projectCards = document.querySelectorAll("[data-domain]");
 
@@ -65,9 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
         filterBtns.forEach((b) => {
           b.classList.remove("btn-primary");
           b.classList.add("btn-secondary");
+          b.setAttribute("aria-pressed", "false");
         });
         btn.classList.remove("btn-secondary");
         btn.classList.add("btn-primary");
+        btn.setAttribute("aria-pressed", "true");
 
         projectCards.forEach((card) => {
           const domain = card.getAttribute("data-domain");
@@ -81,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Notes series filter (if present on notes page)
+  // Notes series filter (with aria-pressed)
   const seriesBtns = document.querySelectorAll("[data-series-filter]");
   const noteCards = document.querySelectorAll("[data-series]");
 
@@ -93,9 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
         seriesBtns.forEach((b) => {
           b.classList.remove("btn-primary");
           b.classList.add("btn-secondary");
+          b.setAttribute("aria-pressed", "false");
         });
         btn.classList.remove("btn-secondary");
         btn.classList.add("btn-primary");
+        btn.setAttribute("aria-pressed", "true");
 
         noteCards.forEach((card) => {
           const cardSeries = card.getAttribute("data-series");
@@ -104,4 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // Copy-link affordance on case study anchor links
+  document.querySelectorAll(".anchor-link").forEach((anchor) => {
+    anchor.addEventListener("click", () => {
+      if (navigator.clipboard && anchor.href) {
+        navigator.clipboard.writeText(anchor.href).catch(() => {});
+      }
+    });
+  });
 });
