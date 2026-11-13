@@ -57,8 +57,8 @@ def build_og_svg(lang: str) -> str:
         n4 = "Mission B: UXO &amp; hazard detection"
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#090d12"/>
-  <g stroke="#1e293b" stroke-width="1" opacity="0.35">
+  <rect width="1200" height="630" fill="#FAFAF7"/>
+  <g stroke="#E5E7EB" stroke-width="1" opacity="0.65">
     <line x1="0" y1="120" x2="1200" y2="120"/>
     <line x1="0" y1="240" x2="1200" y2="240"/>
     <line x1="0" y1="360" x2="1200" y2="360"/>
@@ -69,34 +69,34 @@ def build_og_svg(lang: str) -> str:
     <line x1="800" y1="0" x2="800" y2="630"/>
     <line x1="1000" y1="0" x2="1000" y2="630"/>
   </g>
-  <rect x="64" y="56" width="1072" height="518" rx="16" fill="#0f151d" stroke="#1e293b" stroke-width="1.5"/>
+  <rect x="64" y="56" width="1072" height="518" rx="16" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
 
-  <text x="112" y="128" fill="#94a3b8" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="18" letter-spacing="2">{eyebrow}</text>
-  <text x="112" y="210" fill="#f1f5f9" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="50" font-weight="700">{h1_line1}</text>
-  <text x="112" y="272" fill="#f1f5f9" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="50" font-weight="700">{h1_line2}</text>
-  <text x="112" y="330" fill="#38bdf8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="28" font-weight="600">{sub}</text>
+  <text x="112" y="128" fill="#475569" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="18" letter-spacing="2">{eyebrow}</text>
+  <text x="112" y="210" fill="#0F172A" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="50" font-weight="700">{h1_line1}</text>
+  <text x="112" y="272" fill="#0F172A" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="50" font-weight="700">{h1_line2}</text>
+  <text x="112" y="330" fill="#0369A1" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="28" font-weight="600">{sub}</text>
 
   <!-- Thin stack diagram -->
   <g transform="translate(112, 392)" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="16">
-    <rect x="0" y="22" width="270" height="52" rx="8" fill="#131b26" stroke="#2b3c54" stroke-width="1.5"/>
-    <text x="135" y="53" fill="#f1f5f9" text-anchor="middle">{n1}</text>
+    <rect x="0" y="22" width="270" height="52" rx="8" fill="#FAFAF7" stroke="#64748B" stroke-width="1.5"/>
+    <text x="135" y="53" fill="#0F172A" text-anchor="middle">{n1}</text>
 
-    <line x1="270" y1="48" x2="320" y2="48" stroke="#38bdf8" stroke-width="1.5"/>
+    <line x1="270" y1="48" x2="320" y2="48" stroke="#0369A1" stroke-width="1.5"/>
 
-    <rect x="320" y="22" width="250" height="52" rx="8" fill="#131b26" stroke="#2b3c54" stroke-width="1.5"/>
-    <text x="445" y="53" fill="#f1f5f9" text-anchor="middle">{n2}</text>
+    <rect x="320" y="22" width="250" height="52" rx="8" fill="#FAFAF7" stroke="#64748B" stroke-width="1.5"/>
+    <text x="445" y="53" fill="#0F172A" text-anchor="middle">{n2}</text>
 
-    <path d="M 570 48 L 620 48 L 650 22 L 690 22" fill="none" stroke="#10b981" stroke-width="1.5"/>
-    <path d="M 570 48 L 620 48 L 650 76 L 690 76" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <path d="M 570 48 L 620 48 L 650 22 L 690 22" fill="none" stroke="#047857" stroke-width="1.5"/>
+    <path d="M 570 48 L 620 48 L 650 76 L 690 76" fill="none" stroke="#0369A1" stroke-width="1.5"/>
 
-    <rect x="690" y="-2" width="286" height="44" rx="8" fill="#131b26" stroke="#10b981" stroke-width="1.5"/>
-    <text x="833" y="25" fill="#10b981" text-anchor="middle">{n3}</text>
+    <rect x="690" y="-2" width="286" height="44" rx="8" fill="#FAFAF7" stroke="#047857" stroke-width="1.5"/>
+    <text x="833" y="25" fill="#047857" text-anchor="middle">{n3}</text>
 
-    <rect x="690" y="54" width="286" height="44" rx="8" fill="#131b26" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="833" y="81" fill="#38bdf8" text-anchor="middle">{n4}</text>
+    <rect x="690" y="54" width="286" height="44" rx="8" fill="#FAFAF7" stroke="#0369A1" stroke-width="1.5"/>
+    <text x="833" y="81" fill="#0369A1" text-anchor="middle">{n4}</text>
   </g>
 
-  <text x="112" y="540" fill="#94a3b8" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="18">nikidimitrow.com · Nikolay Dimitrow</text>
+  <text x="112" y="540" fill="#475569" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="18">nikidimitrow.com · Nikolay Dimitrow</text>
 </svg>"""
 
 
@@ -108,7 +108,7 @@ def generate_og_images() -> None:
             svg_code = build_og_svg(lang)
             svg_path = IMAGES_DIR / f"og-{lang}.svg"
             svg_path.write_text(svg_code, encoding="utf-8")
-            html = f"<!DOCTYPE html><html><body style='margin:0;padding:0;background:#090d12;'>{svg_code}</body></html>"
+            html = f"<!DOCTYPE html><html><body style='margin:0;padding:0;background:#FAFAF7;'>{svg_code}</body></html>"
             page.set_content(html)
             page.screenshot(path=str(IMAGES_DIR / f"og-{lang}.png"))
         browser.close()
